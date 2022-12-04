@@ -1,3 +1,8 @@
 openai
 ipykernel
 tomli
+streamlit
+streamlit-cropper
+pillow
+matlabengine==9.12
+matplotlib
