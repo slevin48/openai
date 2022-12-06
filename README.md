@@ -46,3 +46,9 @@ https://www.mathworks.com/help/images/ref/imageviewer-app.html
 ![](img/dechargement3.png)
 
 ![](img/dechargement4.png)
+
+## Resources:
+
+* [DALL·E 2](https://openai.com/dall-e-2/)
+* [DALL·E Editor Guide](https://help.openai.com/en/articles/6516417-dall-e-editor-guide)
+* https://labs.openai.com/editor
