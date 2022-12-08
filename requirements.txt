@@ -4,5 +4,5 @@ tomli
 streamlit
 streamlit-cropper
 pillow
-matlabengine==9.12
+# matlabengine==9.12
 matplotlib
