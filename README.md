@@ -8,14 +8,14 @@ Test OpenAI API
 import openai
 
 response = openai.Image.create(
-  prompt="a funny corgi",
+  prompt="a funny corgi in a cartoon style",
   n=1,
   size="512x512"
 )
 image_url = response['data'][0]['url']
 ```
 
-![corgi](img/corgi.png)
+![corgi](img/funny%20corgi%20in%20a%20cartoon%20style.png)
 
 ## Image processing
 
