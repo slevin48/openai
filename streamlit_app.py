@@ -11,7 +11,6 @@ prompt = st.text_input("Enter your message:", "Hello!" )
 
 # Generate a response from the ChatGPT model
 completion = openai.ChatCompletion.create(
-    engine="text-davinci-002",
     model="gpt-3.5-turbo",
       messages=[
           {"role": "user", "content": prompt }
@@ -19,5 +18,5 @@ completion = openai.ChatCompletion.create(
 )
 
 # Display the response in the Streamlit app
-st.write("ChatGPT:", completion.choices[0].message)
+st.write("🤖 ChatGPT:", completion.choices[0].message.content)
 
