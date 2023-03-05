@@ -6,9 +6,7 @@ import streamlit as st
 openai.api_key = st.secrets['OPEN_AI_KEY']
 
 # Functions
-def new_chat(n):
-  #  file_path = f'chat/convo{n+1}.json'
-  #  open(file_path, 'w').close()
+def new_chat():
    st.session_state.convo = []
    st.session_state.id += 1
 
@@ -37,7 +35,7 @@ if 'convo' not in st.session_state:
 
 n = len(os.listdir('chat'))
 if 'id' not in st.session_state:
-    st.session_state.id = n
+    st.session_state.id = n+1
 
 id = st.session_state.id
 
@@ -45,11 +43,9 @@ id = st.session_state.id
 st.title('🐱 ChatGPT-like bot 🤖')
 
 if st.sidebar.button('New Chat 🐱'):
-   new_chat(n)
+   new_chat()
 for file in sorted(os.listdir('chat')):
   st.sidebar.write('💬',file.replace('.json',''))
-# st.sidebar.write(f'💬 convo{id}')
-# st.sidebar.write(f'{n} conversations')
 
 
 # Create a text input widget in the Streamlit app
