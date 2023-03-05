@@ -6,6 +6,30 @@ Test OpenAI API
 
 ![chatGPT](img/chatGPT.png)
 
+```python
+import openai
+import streamlit as st
+
+# Set the API key for the openai package
+openai.api_key = st.secrets['OPEN_AI_KEY']
+
+st.title("🤖 ChatGPT-like bot 🐱 ")
+
+# Create a text input widget in the Streamlit app
+prompt = st.text_input("Enter your message:", "Hello!" )
+
+# Generate a response from the ChatGPT model
+completion = openai.ChatCompletion.create(
+    model="gpt-3.5-turbo",
+      messages=[
+          {"role": "user", "content": prompt }
+            ]
+)
+
+# Display the response in the Streamlit app
+st.write("🤖 ChatGPT:", completion.choices[0].message.content)
+```
+
 ## [DALL-E](DallE/README.md) [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://openai-image.streamlit.app/)
 
 ![corgi](img/funny%20corgi%20in%20a%20cartoon%20style.png)
