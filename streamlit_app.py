@@ -2,6 +2,8 @@ import openai
 import json, os
 import streamlit as st
 
+st.set_page_config(page_title="Chat 48",page_icon="🤖")
+
 # Set the API key for the openai package
 openai.api_key = st.secrets['OPEN_AI_KEY']
 

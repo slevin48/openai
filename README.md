@@ -1,10 +1,10 @@
 # 🤖 OpenAI
 
-Test OpenAI API
+🐱ChatGPT-like Bot🤖 with OpenAI API
 
 ## ChatGPT (New GPT 3.5 turbo API) [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://openai48.streamlit.app/)
 
-![chatGPT](img/chatGPT.png)
+https://user-images.githubusercontent.com/12418115/222990188-9cb2ee4a-29c6-4822-995e-f89b1f3225c1.webm
 
 ```python
 import openai
