@@ -11,11 +11,33 @@ st.title('📝 Teams meeting summaryzer')
 # Set the API key for the openai package
 openai.api_key = st.secrets['OPEN_AI_KEY']
 
-def num_tokens_from_string(string: str, encoding_name: str) -> int:
+def num_tokens(string: str) -> int:
     """Returns the number of tokens in a text string."""
+    encoding_name = 'cl100k_base'
     encoding = tiktoken.get_encoding(encoding_name)
     num_tokens = len(encoding.encode(string))
     return num_tokens
+
+def slice_string(text: str) -> list[str]:
+    # Split text into chunks based on space or newline
+    chunks = text.split()
+
+    # Initialize variables
+    result = []
+    current_chunk = ""
+
+    # Concatenate chunks until the total length is less than 4096 tokens
+    for chunk in chunks:
+        # if len(current_chunk) + len(chunk) < 4096:
+        if num_tokens(current_chunk+chunk) < 4000:
+            current_chunk += " " + chunk if current_chunk else chunk
+        else:
+            result.append(current_chunk.strip())
+            current_chunk = chunk
+    if current_chunk:
+        result.append(current_chunk.strip())
+
+    return result
 
 def summarize(convo: str) -> str:
     """Returns the summary of a text string."""
@@ -57,14 +79,22 @@ if file is not None:
     convo = sep.join(str)
         
     convo = st.text_area('vtt file content',convo)
-    toknum = num_tokens_from_string(convo,'cl100k_base')
+    toknum = num_tokens(convo)
     st.write(toknum,'tokens')
-    if (toknum//4096 > 0):
+    if (toknum > 4096):
         st.write('Text too long please prune to fit under 4096 tokens')
-        sum = st.button('summarize',disabled=True)
+        bd = st.checkbox('Breakdown recording')
+        if bd:
+            chunks = slice_string(convo)
+            sum = st.button('summarize')
+        else:
+            sum = st.button('summarize',disabled=True)
+        if sum:
+            for chunk in chunks:
+                st.write(summarize(chunk))
     else:
         sum = st.button('summarize')
-    if sum & (toknum//4096 < 1):
+    if sum & (toknum <= 4096):
         st.write(summarize(convo))
 
 else:
