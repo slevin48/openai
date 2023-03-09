@@ -2,7 +2,9 @@ openai
 ipykernel
 tomli
 streamlit
-streamlit-cropper
-pillow
+# streamlit-cropper
+# pillow
 # matlabengine==9.12
-matplotlib
+# matplotlib
+webvtt-py
+tiktoken
