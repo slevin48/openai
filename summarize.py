@@ -59,12 +59,19 @@ if file is not None:
     convo = st.text_area('vtt file content',convo)
     toknum = num_tokens_from_string(convo,'cl100k_base')
     st.write(toknum,'tokens')
-    # if (toknum//4096 > 0):
-    #     st.write('Text too long please prune to fit under 4096 tokens')
-    # st.write(toknum//4096)
-
-    sum = st.button('summarize')
+    if (toknum//4096 > 0):
+        st.write('Text too long please prune to fit under 4096 tokens')
+        sum = st.button('summarize',disabled=True)
+    else:
+        sum = st.button('summarize')
     if sum & (toknum//4096 < 1):
         st.write(summarize(convo))
-    else:
-        st.write('Text too long please prune to fit under 4096 tokens')
+
+else:
+    with open('vtt/YannMike_2023-03-08.vtt') as f:
+        st.download_button(
+            label="Sample VTT file",
+            data=f,
+            file_name="sample.vtt",
+            mime="text/vtt"
+          )
