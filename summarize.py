@@ -2,6 +2,7 @@ import streamlit as st
 import webvtt
 import openai
 from io import StringIO
+import tiktoken
 
 st.set_page_config(page_title="Summarize",page_icon="🤖")
 
@@ -10,7 +11,14 @@ st.title('📝 Teams meeting summaryzer')
 # Set the API key for the openai package
 openai.api_key = st.secrets['OPEN_AI_KEY']
 
-def summarize(convo):
+def num_tokens_from_string(string: str, encoding_name: str) -> int:
+    """Returns the number of tokens in a text string."""
+    encoding = tiktoken.get_encoding(encoding_name)
+    num_tokens = len(encoding.encode(string))
+    return num_tokens
+
+def summarize(convo: str) -> str:
+    """Returns the summary of a text string."""
     context = 'summarize the following conversation'
     completion = openai.ChatCompletion.create(
     model='gpt-3.5-turbo',
@@ -49,7 +57,14 @@ if file is not None:
     convo = sep.join(str)
         
     convo = st.text_area('vtt file content',convo)
-    # st.write(str)
+    toknum = num_tokens_from_string(convo,'cl100k_base')
+    st.write(toknum,'tokens')
+    # if (toknum//4096 > 0):
+    #     st.write('Text too long please prune to fit under 4096 tokens')
+    # st.write(toknum//4096)
 
-    if st.button('summarize'):
+    sum = st.button('summarize')
+    if sum & (toknum//4096 < 1):
         st.write(summarize(convo))
+    else:
+        st.write('Text too long please prune to fit under 4096 tokens')
