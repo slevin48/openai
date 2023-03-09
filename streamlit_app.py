@@ -47,8 +47,34 @@ if 'id' not in st.session_state:
 
 id = st.session_state.id
 
+if 'edit' not in st.session_state:
+    st.session_state.edit = False
 
 st.title('🐱 ChatGPT-like bot 🤖')
+
+if st.button('edit'):
+  st.session_state.edit = not st.session_state.edit
+
+if st.session_state.edit:
+# if st.checkbox('edit'):
+  # # change to st.form
+  # col1,col2 = st.columns([1,1])
+  # with col1:
+  #   name = st.text_input('Change name',label_visibility='collapsed',value=f'convo{st.session_state.id}')
+  # with col2:
+  #   if st.button('Save name'):
+  #     os.rename(f'chat/convo{st.session_state.id}.json', f'chat/{name}.json')
+  # with st.form('edit'):
+  #   col1,col2 = st.columns([1,1])
+  #   with col1:
+  #     name = st.text_input('Change name',label_visibility='collapsed',value=f'convo{st.session_state.id}')
+  #   with col2:
+  #     changed = st.form_submit_button(label='Submit')
+  with st.form('change'):
+    name = st.text_input('Change name',label_visibility='collapsed',value=f'convo{st.session_state.id}')
+    changed = st.form_submit_button(label='Submit')
+    if changed:
+      os.rename(f'chat/convo{st.session_state.id}.json', f'chat/{name}.json')
 
 if st.sidebar.button('New Chat 🐱'):
    new_chat()
