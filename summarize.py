@@ -29,7 +29,7 @@ def slice_string(text: str) -> list[str]:
     # Concatenate chunks until the total length is less than 4096 tokens
     for chunk in chunks:
         # if len(current_chunk) + len(chunk) < 4096:
-        if num_tokens(current_chunk+chunk) < 4000:
+        if num_tokens(current_chunk+chunk) < 3300:
             current_chunk += " " + chunk if current_chunk else chunk
         else:
             result.append(current_chunk.strip())
