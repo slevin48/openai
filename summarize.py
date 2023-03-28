@@ -39,9 +39,9 @@ def slice_string(text: str) -> list[str]:
 
     return result
 
-def summarize(convo: str) -> str:
+def summarize(context: str,convo: str) -> str:
     """Returns the summary of a text string."""
-    context = 'summarize the following conversation'
+    context = context
     completion = openai.ChatCompletion.create(
     model='gpt-3.5-turbo',
       messages=[
@@ -51,7 +51,7 @@ def summarize(convo: str) -> str:
     )
     return completion.choices[0].message.content
 
-
+context = st.text_input('Context','summarize the following conversation')
 file = st.file_uploader('Upload Teams VTT transcript',type='vtt')
 
 if file is not None:
@@ -91,11 +91,11 @@ if file is not None:
             sum = st.button('summarize',disabled=True)
         if sum:
             for chunk in chunks:
-                st.write(summarize(chunk))
+                st.write(summarize(context,chunk))
     else:
         sum = st.button('summarize')
     if sum & (toknum <= 4096):
-        st.write(summarize(convo))
+        st.write(summarize(context,convo))
 
 else:
     with open('vtt/YannMike_2023-03-08.vtt') as f:
