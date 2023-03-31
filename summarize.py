@@ -39,11 +39,11 @@ def slice_string(text: str) -> list[str]:
 
     return result
 
-def summarize(context: str,convo: str) -> str:
+def summarize(context: str, model:str, convo: str) -> str:
     """Returns the summary of a text string."""
     context = context
     completion = openai.ChatCompletion.create(
-    model='gpt-3.5-turbo',
+    model = model,
       messages=[
         {'role': 'system','content': context},
         {'role': 'user', 'content': convo}
@@ -52,7 +52,10 @@ def summarize(context: str,convo: str) -> str:
     return completion.choices[0].message.content
 
 context = st.text_input('Context','summarize the following conversation')
+model = st.radio('Model',('gpt-3.5-turbo','gpt-4'))
 file = st.file_uploader('Upload Teams VTT transcript',type='vtt')
+maxtokens = {'gpt-3.5-turbo': 4096,'gpt-4': 8192 }
+# st.write(maxtokens[model])
 
 if file is not None:
     data = StringIO(file.getvalue().decode('utf-8'))
@@ -81,8 +84,8 @@ if file is not None:
     convo = st.text_area('vtt file content',convo)
     toknum = num_tokens(convo)
     st.write(toknum,'tokens')
-    if (toknum > 4096):
-        st.write('Text too long please prune to fit under 4096 tokens')
+    if (toknum > maxtokens[model]):
+        st.write(f'Text too long please prune to fit under {maxtokens[model]} tokens')
         bd = st.checkbox('Breakdown recording')
         if bd:
             chunks = slice_string(convo)
@@ -91,11 +94,11 @@ if file is not None:
             sum = st.button('summarize',disabled=True)
         if sum:
             for chunk in chunks:
-                st.write(summarize(context,chunk))
+                st.write(summarize(context,model,chunk))
     else:
         sum = st.button('summarize')
-    if sum & (toknum <= 4096):
-        st.write(summarize(context,convo))
+    if sum & (toknum <= maxtokens[model]):
+        st.write(summarize(context,model,convo))
 
 else:
     with open('vtt/YannMike_2023-03-08.vtt') as f:
