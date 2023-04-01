@@ -4,9 +4,9 @@ import openai
 from io import StringIO
 import tiktoken
 
-st.set_page_config(page_title="Summarize",page_icon="🤖")
+st.set_page_config(page_title="Summarize",page_icon="📝")
 
-st.title('📝 Teams meeting summaryzer')
+st.title('📝 Teams meeting summarizer')
 
 # Set the API key for the openai package
 openai.api_key = st.secrets['OPEN_AI_KEY']

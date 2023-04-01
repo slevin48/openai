@@ -9,9 +9,9 @@ from langchain.chains.summarize import load_summarize_chain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chat_models import ChatOpenAI
 
-st.set_page_config(page_title="Summarize",page_icon="🤖")
+st.set_page_config(page_title="Summarize",page_icon="📝")
 
-st.title('📝 Teams meeting summaryzer')
+st.title('📝 Teams meeting summarizer (powered by 🦜🔗LangChain)')
 
 # Set the API key for the openai package
 os.environ['OPENAI_API_KEY'] = st.secrets['OPEN_AI_KEY']
