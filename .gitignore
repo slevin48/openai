@@ -2,3 +2,5 @@
 env/
 vtt/
 txt/
+book/
+.chroma/
