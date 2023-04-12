@@ -10,3 +10,4 @@ webvtt-py
 tiktoken
 langchain
 unstructured
+bs4

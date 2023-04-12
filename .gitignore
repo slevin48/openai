@@ -2,3 +2,4 @@
 env/
 vtt/
 txt/
+__pycache__/
