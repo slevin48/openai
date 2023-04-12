@@ -44,3 +44,4 @@ https://user-images.githubusercontent.com/12418115/229315555-c9d2077a-a2ed-4538-
 
 * [Introducing ChatGPT and Whisper APIs](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)
 * [Chat completions](https://platform.openai.com/docs/guides/chat/introduction)
+* [Awesome ChatGPT API](https://awesome-chatgpt-api.top/posts/the-awesome/)
