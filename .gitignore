@@ -4,3 +4,4 @@ vtt/
 txt/
 book/
 .chroma/
+__pycache__/
