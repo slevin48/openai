@@ -10,3 +10,7 @@ webvtt-py
 tiktoken
 langchain
 unstructured
+pypdf
+# chromadb
+# pinecone-client
+llama_index
