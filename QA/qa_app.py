@@ -17,7 +17,7 @@ except:
 
 url = "https://ia802800.us.archive.org/11/items/crossingthechasm_202002/Crossing%20the%20Chasm.pdf"
 
-@st.cache
+@st.cache_data
 def get_book(url):
     # Parse the URL
     parsed_url = urllib.parse.urlparse(url)
@@ -31,7 +31,7 @@ def get_book(url):
     return pdf
 
 # load document with LLaMa Index
-@st.cache
+@st.cache_data
 def load_doc(pdf):
     PDFReader = download_loader("PDFReader")
     loader = PDFReader()

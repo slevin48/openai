@@ -36,6 +36,10 @@ st.write("🤖 ChatGPT:", completion.choices[0].message.content)
 
 https://user-images.githubusercontent.com/12418115/229315555-c9d2077a-a2ed-4538-816c-ce0b9cece761.webm
 
+## Question Answering [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://crossing-the-chasm.streamlit.app/)
+
+https://user-images.githubusercontent.com/12418115/232059300-25379c80-c193-4ca1-8c21-3549cc8e327f.webm
+
 ## [DALL-E](DallE/README.md) [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://openai-image.streamlit.app/)
 
 ![corgi](img/funny%20corgi%20in%20a%20cartoon%20style.png)
