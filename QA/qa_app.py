@@ -31,7 +31,6 @@ def get_book(url):
     return pdf
 
 # load document with LLaMa Index
-@st.cache_data
 def load_doc(pdf):
     PDFReader = download_loader("PDFReader")
     loader = PDFReader()
