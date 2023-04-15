@@ -3,7 +3,11 @@ from llama_index import download_loader, GPTSimpleVectorIndex, LLMPredictor, Ser
 from langchain.chat_models import ChatOpenAI
 import urllib.request
 import urllib.parse
-import os
+import os, boto3
+
+s3_bucket = 'book48'
+s3_client = boto3.client('s3',aws_access_key_id = st.secrets["aws"]["aws_access_key_id"],
+                    aws_secret_access_key = st.secrets["aws"]["aws_secret_access_key"])
 
 os.environ['OPENAI_API_KEY'] = st.secrets['OPEN_AI_KEY'] 
 llm_predictor = LLMPredictor(llm=ChatOpenAI(model_name="gpt-3.5-turbo"))
@@ -54,9 +58,14 @@ if src == 'full':
     except Exception as e:
         print(f"Error downloading PDF file: {e}")
     file = os.path.join('index','index-full.json')
+    # file = 'index/index-full.json'
 elif src == 'chapter7':
     pdf = 'Crossing the Chasm-202-217.pdf'
-    file = os.path.join('index','index-202-217.json')
+    # file = os.path.join('index','index-202-217.json')
+    file = 'index/index-202-217.json'
+    # file = 'index-202-217.json'
+# s3_client.download_file(s3_bucket, object_name,file_name)
+s3_client.download_file(s3_bucket,file, file)
 
 # list = os.listdir('book')
 # l = st.selectbox("Select Book",list)
