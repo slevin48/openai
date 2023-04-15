@@ -44,7 +44,7 @@ def load_doc(pdf):
 
 def load_index(file):
     # load from disk
-    index = GPTSimpleVectorIndex.load_from_disk(file)
+    index = GPTSimpleVectorIndex.load_from_disk(file,service_context=service_context)
     return index
 
 
