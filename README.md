@@ -38,7 +38,7 @@ https://user-images.githubusercontent.com/12418115/229315555-c9d2077a-a2ed-4538-
 
 ## Question Answering [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://crossing-the-chasm.streamlit.app/)
 
-https://user-images.githubusercontent.com/12418115/232059300-25379c80-c193-4ca1-8c21-3549cc8e327f.webm
+https://user-images.githubusercontent.com/12418115/232541190-43c44653-4b1c-4591-b781-13ab5d4cf4ca.mp4
 
 ## [DALL-E](DallE/README.md) [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://openai-image.streamlit.app/)
 
