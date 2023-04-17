@@ -1,16 +1,18 @@
 import streamlit as st
 from llama_index import download_loader, GPTSimpleVectorIndex, LLMPredictor, ServiceContext
 from langchain.chat_models import ChatOpenAI
+from langchain.schema import HumanMessage
 import urllib.request
 import urllib.parse
-import os, boto3
+import os, boto3, json
 
 s3_bucket = 'book48'
 s3_client = boto3.client('s3',aws_access_key_id = st.secrets["aws"]["aws_access_key_id"],
                     aws_secret_access_key = st.secrets["aws"]["aws_secret_access_key"])
 
 os.environ['OPENAI_API_KEY'] = st.secrets['OPEN_AI_KEY'] 
-llm_predictor = LLMPredictor(llm=ChatOpenAI(model_name="gpt-3.5-turbo"))
+chat = ChatOpenAI(model_name="gpt-3.5-turbo")
+llm_predictor = LLMPredictor(llm=chat)
 service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
 
 try:
@@ -20,6 +22,10 @@ except:
     pass
 
 url = "https://ia802800.us.archive.org/11/items/crossingthechasm_202002/Crossing%20the%20Chasm.pdf"
+
+def llm(prompt):
+    res = chat([HumanMessage(content=prompt)])
+    return res.dict()['content']
 
 @st.cache_data
 def get_book(url):
@@ -46,6 +52,9 @@ def load_index(file):
     # load from disk
     index = GPTSimpleVectorIndex.load_from_disk(file,service_context=service_context)
     return index
+
+def change_prompt(prompt):
+    st.session_state.prompt = prompt
 
 
 st.title("🤖 Question Answering on Book")
@@ -80,7 +89,10 @@ else:
     index.save_to_disk(file)
     print(f'Creating and saving index: {file}')
 
-query = st.text_area('Query',"what is Vendor-Oriented Pricing?")
+if 'prompt' not in st.session_state:
+    st.session_state.prompt = "what is Vendor-Oriented Pricing?"
+
+query = st.text_area('Query',value=st.session_state.prompt)
 if st.button('Answer'):
     res = index.query(query)
     st.write(res.response)
@@ -88,3 +100,18 @@ if st.button('Answer'):
     with st.expander('Sources:'):
         # st.write(res.get_formatted_sources().replace('>',''))
         st.write(res.source_nodes[0].node.get_text())
+    st.write('Follow-up questions:')
+    follow_up = f'''
+    Provide a list of of 3 follow-up questions the initial query and the result associated. 
+    Here is the initial query:
+    {query}
+    Here is the result associated:
+    {res.response}
+    Format the output as a JSON file with a list of the 3 follow-up questions in a field called follow-up
+    '''
+    q2 = llm(follow_up)
+    jason = json.loads(q2)
+    # st.write(jason)
+
+    for element in jason['follow-up']:
+        st.button(element, on_click=change_prompt, args=(element,))
