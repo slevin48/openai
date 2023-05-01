@@ -21,7 +21,7 @@ try:
 except:
     pass
 
-url = "https://www.impromptubook.com/wp-content/uploads/2023/03/impromptu-rh.pdf"
+url = "https://ia802800.us.archive.org/11/items/crossingthechasm_202002/Crossing%20the%20Chasm.pdf"
 
 def llm(prompt):
     res = chat([HumanMessage(content=prompt)])
@@ -58,18 +58,21 @@ def change_prompt(prompt):
 
 
 st.title("🤖 Question Answering on Book")
-st.header("📖 Impromptu")
+st.header("📖 Crossing the Chasm")
 
-src = st.radio('Source',['full','chapter1'],index=1)
+src = st.radio('Source',['full','chapter7'],index=1)
 if src == 'full':
     try:
         pdf = get_book(url)
     except Exception as e:
         print(f"Error downloading PDF file: {e}")
-    file = 'index/index-impromptu.json'
-elif src == 'chapter1':
-    pdf = 'impromptu-chap1.pdf'
-    file = 'index/index-impromptu-chap1.json'
+    file = os.path.join('index','index-full.json')
+    # file = 'index/index-full.json'
+elif src == 'chapter7':
+    pdf = 'Crossing the Chasm-202-217.pdf'
+    # file = os.path.join('index','index-202-217.json')
+    file = 'index/index-202-217.json'
+    # file = 'index-202-217.json'
 # s3_client.download_file(s3_bucket, object_name,file_name)
 s3_client.download_file(s3_bucket,file, file)
 
@@ -87,7 +90,7 @@ else:
     print(f'Creating and saving index: {file}')
 
 if 'prompt' not in st.session_state:
-    st.session_state.prompt = "what is the opinion of the author?"
+    st.session_state.prompt = "what is Vendor-Oriented Pricing?"
 
 query = st.text_area('Query',value=st.session_state.prompt)
 if st.button('Answer'):
