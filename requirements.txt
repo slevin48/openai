@@ -8,10 +8,10 @@ streamlit
 # matplotlib
 webvtt-py
 tiktoken
-langchain
+langchain==0.0.157
 unstructured
 pypdf
 # chromadb
 # pinecone-client
-llama_index
+llama_index==0.6.0
 boto3

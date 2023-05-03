@@ -1,5 +1,5 @@
 import streamlit as st
-from llama_index import SimpleDirectoryReader, GPTSimpleVectorIndex, LLMPredictor, ServiceContext
+from llama_index import SimpleDirectoryReader, GPTVectorStoreIndex, LLMPredictor, ServiceContext
 # from langchain.document_loaders import UnstructuredFileLoader
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage,SystemMessage
@@ -29,7 +29,7 @@ st.write('to be in two Teams meetings at the same time')
 # load document with LLaMa Index
 def load_doc():
     documents = SimpleDirectoryReader('txt').load_data()
-    index = GPTSimpleVectorIndex.from_documents(documents,service_context=service_context)
+    index = GPTVectorStoreIndex.from_documents(documents,service_context=service_context)
     return index
 
 
