@@ -30,7 +30,8 @@ st.write('to be in two Teams meetings at the same time')
 def load_doc():
     documents = SimpleDirectoryReader('txt').load_data()
     index = GPTVectorStoreIndex.from_documents(documents,service_context=service_context)
-    return index
+    query_engine = index.as_query_engine()
+    return query_engine
 
 
 def num_tokens(string: str) -> int:
@@ -129,12 +130,12 @@ else:
           )
 
 if st.checkbox('Ask questions about the meeting'):
-    index = load_doc()
+    query_engine = load_doc()
     # st.write(index)
     q1 = 'How does Yann want to develop an app?'
     query = st.text_input('Query',q1)
     if st.button('Answer'):
-        res = index.query(query)
+        res = query_engine.query(query)
         st.write(res.response)
         with st.expander('Sources:'):
             st.write(res.source_nodes[0].node.get_text())
