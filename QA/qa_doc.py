@@ -26,7 +26,6 @@ def llm(prompt):
     res = chat([HumanMessage(content=prompt)])
     return res.dict()['content']
 
-@st.cache_data
 def get_book(url):
     # Parse the URL
     parsed_url = urllib.parse.urlparse(url)
@@ -75,7 +74,7 @@ def get_sources(res):
 
 def follow_up(res):
     follow_up_prompt = f'''
-    Provide a list of of 3 follow-up questions the initial query and the result associated. 
+    Provide a list of 3 follow-up questions to the initial query and the result associated. 
     Here is the initial query:
     {res['query']}
     Here is the result associated:
@@ -92,12 +91,18 @@ def follow_up(res):
 st.title("🤖 Question Answering on Book")
 st.header("📖 Impromptu")
 
+if not os.path.exists("book/impromptu-rh.pdf"):
+    if st.button('Get Book'):
+        pdf = get_book(url)
+        # st.write("downloading ... ",pdf)
+
 if 'prompt' not in st.session_state:
     st.session_state.prompt = "How can AI be used for education?"
 
 i = st.checkbox('Index book')
 if i:
-    qa = index_doc("book/impromptu-rh.pdf")
+    pdf = "impromptu-rh.pdf"
+    qa = index_doc("book/"+pdf)
 
 query = st.text_area('Query',value=st.session_state.prompt)
 if st.button('Answer') & i:
