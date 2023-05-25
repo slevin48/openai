@@ -12,7 +12,7 @@ langchain==0.0.157
 unstructured
 # unstructured[local-inference]
 pypdf
-# chromadb
+chromadb
 # pinecone-client
 llama_index==0.6.0
 boto3
