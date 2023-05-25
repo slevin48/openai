@@ -10,6 +10,7 @@ webvtt-py
 tiktoken
 langchain==0.0.157
 unstructured
+# unstructured[local-inference]
 pypdf
 # chromadb
 # pinecone-client
