@@ -88,30 +88,44 @@ def follow_up(res):
     for element in jason['follow-up']:
         st.button(element, on_click=change_prompt, args=(element,))
 
-st.title("🤖 Question Answering on Book")
-st.header("📖 Impromptu")
-
-if not os.path.exists("book/impromptu-rh.pdf"):
-    if st.button('Get Book'):
-        pdf = get_book(url)
-        # st.write("downloading ... ",pdf)
+st.title("🤖 Question Answering on Doc")
 
 if 'prompt' not in st.session_state:
     st.session_state.prompt = "How can AI be used for education?"
 
-i = st.checkbox('Index book')
-if i:
-    pdf = "impromptu-rh.pdf"
-    qa = index_doc("book/"+pdf)
+src = st.radio('Doc source',('Book demo','Upload'))
 
-query = st.text_area('Query',value=st.session_state.prompt)
-if st.button('Answer') & i:
-    res = qa({"query": query})
-    # st.write(res)
-    st.write(res['result'])
-    # st.write("### Sources:")
-    with st.expander('Sources:'):
-        # st.write(res.get_formatted_sources().replace('>',''))
-        get_sources(res)
-    st.write('Follow-up questions:')
-    follow_up(res)
+if src == 'Book demo':
+    st.markdown(f"Source: 📖 [Impromptu]({url})")
+    if not os.path.exists("book/impromptu-rh.pdf"):
+        # if st.button('Get Book'):
+        pdf = get_book(url)
+            # st.write("downloading ... ",pdf)
+    else:
+        pdf = "impromptu-rh.pdf"
+else:
+    uploaded_file = st.file_uploader('Upload','pdf')
+    if uploaded_file is not None:
+        # st.write(uploaded_file)
+        pdf = uploaded_file.name
+        with open(os.path.join('book', uploaded_file.name), "wb") as f:
+            f.write(uploaded_file.getbuffer())
+
+if 'pdf' in locals():
+    # st.write(pdf)
+    i = st.checkbox('Index doc')
+    if i:
+        # pdf = "impromptu-rh.pdf"
+        qa = index_doc("book/"+pdf)
+
+    query = st.text_area('Query',value=st.session_state.prompt)
+    if st.button('Answer') & i:
+        res = qa({"query": query})
+        # st.write(res)
+        st.write(res['result'])
+        # st.write("### Sources:")
+        with st.expander('Sources:'):
+            # st.write(res.get_formatted_sources().replace('>',''))
+            get_sources(res)
+        st.write('Follow-up questions:')
+        follow_up(res)
