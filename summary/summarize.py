@@ -54,9 +54,9 @@ def summarize(context: str, model:str, convo: str) -> str:
     return completion.choices[0].message.content
 
 context = st.text_input('Context','summarize the following conversation')
-model = st.radio('Model',('gpt-3.5-turbo','gpt-4'))
+model = st.radio('Model',('gpt-3.5-turbo','gpt-4', 'gpt-3.5-turbo-16k'))
 file = st.file_uploader('Upload Teams VTT transcript',type='vtt')
-maxtokens = {'gpt-3.5-turbo': 4096,'gpt-4': 8192 }
+maxtokens = {'gpt-3.5-turbo': 4096, 'gpt-4': 8192, 'gpt-3.5-turbo-16k':16384 }
 # st.write(maxtokens[model])
 
 if file is not None:
@@ -96,10 +96,12 @@ if file is not None:
             sum = st.button('summarize',disabled=True)
         if sum:
             for chunk in chunks:
+                st.write(f'Summary of the meeting with {model}')
                 st.write(summarize(context,model,chunk))
     else:
         sum = st.button('summarize')
     if sum & (toknum <= maxtokens[model]):
+        st.write(f'Summary of the meeting with {model}')
         st.write(summarize(context,model,convo))
 
 else:
