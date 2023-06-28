@@ -1,0 +1,7 @@
+ipykernel
+selenium
+openai
+tomli
+matlabengine
+streamlit
+pandas

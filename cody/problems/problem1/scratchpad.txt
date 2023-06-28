@@ -1,0 +1,10 @@
+% Use this area as a scratchpad to test code that you don't want to submit:
+x = 1 + 2
+% Or call your function:
+times2(x)
+% Note this code will NOT be used for submit
+1
+2
+3
+4
+5
