@@ -18,7 +18,7 @@
   "sourceBin" : [
     {
       "id" : 1,
-      "src" : "C:\\Users\\ydebray\\Downloads\\openai\\story\\img\\cyberpunk_Maya_v1-x2plus.png",
+      "src" : "C:\\Users\\ydebray\\Downloads\\openai\\story\\img\\cyberpunk_Eva_v1-x2plus.png",
       "rect" : [0, 0, 1024, 1024],
       "lastMod" : "20230703T173058",
       "loudnessNormalization" : true,
@@ -196,7 +196,7 @@
                     "trackNumber" : 0,
                     "trimStartSum" : 0,
                     "attributes" : {
-                      "ident" : "cyberpunk_Maya_v1-x2plus"
+                      "ident" : "cyberpunk_Eva_v1-x2plus"
                     },
                     "parameters" : {
                       "translation1" : 8.5265128291212e-14,
