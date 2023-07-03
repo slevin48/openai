@@ -16,3 +16,4 @@ chromadb
 # pinecone-client
 llama_index==0.6.0
 boto3
+elevenlabs
