@@ -41,3 +41,27 @@ In this remarkable era, humans embraced their existence not merely as biological
                 |__/                       |__/ 
 
 ![midjourney](img/midjourney_cyberpunk_Maya.png)
+
+    Prompt: In the midjourney of "Biological Machines," create an illustration capturing the essence of Maya, the main character, played by Alicia Vikander. Show Maya standing in front of a large, reflective mirror, symbolizing self-reflection and introspection. Alicia Vikander's likeness should be depicted, portraying Maya's contemplative expression and determination. Surround Maya with swirling ribbons of light, representing the experiences and choices that have shaped her. In the background, include subtle visual cues that hint at the concept of humans as biological machines, such as circuitry patterns intertwining with natural elements. Use a color palette that blends warm and cool tones, signifying the balance between the organic and technological aspects of Maya's journey. Let the illustration radiate a sense of wonder and curiosity, capturing the transformative nature of Maya's self-discovery.
+
+![Alicia_Vikander_in_Biological_Machines_1_1.png](img/Alicia_Vikander_in_Biological_Machines_1_1.png)
+
+
+## Resources 📚
+
+- Youtube tutorial & examples
+    - [Creating Viral Videos With AI](https://www.youtube.com/watch?v=pgdmhwtsntk)
+    - [Lord of the Rings by Wes Anderson Trailer | The Whimsical Fellowship](https://www.youtube.com/watch?v=KrjL_TSOFrI)
+    - [Star Wars by Wes Anderson Trailer | The Galactic Menagerie](https://www.youtube.com/watch?v=d-8DT5Q8kzI)
+- Images
+    - [Midjourney](https://midjourney.com/)
+    - [DreamStudio](https://dreamstudio.ai/)
+- Text-to-Speech
+    - [ElevenLabs](https://elevenlabs.io/)
+    - [ElevenLabs Python](https://github.com/elevenlabs/elevenlabs-python)
+- Music
+    - [Mubert](https://mubert.com/)
+    - [Motion Array](https://motionarray.com/)
+    - [Tron soundtrack](https://www.youtube.com/watch?v=mFErBk9HtZE)
+- Video
+    - [D-ID](https://www.d-id.com/)

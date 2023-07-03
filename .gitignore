@@ -6,3 +6,6 @@ book/
 index/
 .chroma/
 __pycache__/
+ffmpeg/
+tron/
+archives/
