@@ -1,0 +1,585 @@
+{
+  "search_metadata": {
+    "id": "6435b3c8eb690f61942b976f",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/57cefc9bf35f536c/6435b3c8eb690f61942b976f.json",
+    "created_at": "2023-04-11 19:23:52 UTC",
+    "processed_at": "2023-04-11 19:23:53 UTC",
+    "google_url": "https://www.google.com/search?q=What+movie+won+best+picture+in+2023%3F&oq=What+movie+won+best+picture+in+2023%3F&sourceid=chrome&ie=UTF-8",
+    "raw_html_file": "https://serpapi.com/searches/57cefc9bf35f536c/6435b3c8eb690f61942b976f.html",
+    "total_time_taken": 2.0
+  },
+  "search_parameters": {
+    "engine": "google",
+    "q": "What movie won best picture in 2023?",
+    "google_domain": "google.com",
+    "device": "desktop"
+  },
+  "search_information": {
+    "organic_results_state": "Results for exact spelling",
+    "error_message": "Google has returned malformed or illegal request error. Check search parameters.",
+    "total_results": 7270000000,
+    "time_taken_displayed": 0.65,
+    "menu_items": [
+      {
+        "position": 1,
+        "title": "News",
+        "link": "https://www.google.com/search?q=What+movie+won+best+picture+in+2023%3F&ucbcb=1&source=lnms&tbm=nws&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8Q0pQJegQIBBAC",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=What+movie+won+best+picture+in+2023%3F&tbm=nws"
+      },
+      {
+        "position": 2,
+        "title": "Images",
+        "link": "https://www.google.com/search?q=What+movie+won+best+picture+in+2023%3F&ucbcb=1&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8Q0pQJegQIBBAE",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=What+movie+won+best+picture+in+2023%3F&tbm=isch"
+      },
+      {
+        "position": 3,
+        "title": "Videos",
+        "link": "https://www.google.com/search?q=What+movie+won+best+picture+in+2023%3F&ucbcb=1&source=lnms&tbm=vid&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8Q0pQJegQIBBAG",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=What+movie+won+best+picture+in+2023%3F&tbm=vid"
+      },
+      {
+        "position": 4,
+        "title": "Books",
+        "link": "https://www.google.com/search?q=What+movie+won+best+picture+in+2023%3F&ucbcb=1&source=lnms&tbm=bks&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8Q0pQJegQIBBAI"
+      },
+      {
+        "position": 5,
+        "title": "Maps",
+        "link": "https://maps.google.com/maps?ucbcb=1&q=What+movie+won+best+picture+in+2023%3F&um=1&ie=UTF-8&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8Q0pQJegQIBBAK"
+      },
+      {
+        "position": 6,
+        "title": "Shopping",
+        "link": "https://www.google.com/search?q=What+movie+won+best+picture+in+2023%3F&ucbcb=1&source=lnms&tbm=shop&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8Q0pQJegQIBBAM",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=What+movie+won+best+picture+in+2023%3F&tbm=shop"
+      },
+      {
+        "position": 7,
+        "title": "Flights",
+        "link": "https://www.google.com/flights?q=What+movie+won+best+picture+in+2023%3F&ucbcb=1&source=lnms&tbm=flm&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8Q0pQJegQIBBAO"
+      },
+      {
+        "position": 8,
+        "title": "Finance",
+        "link": "https://www.google.com/finance?sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8Q0pQJegQIBBAQ"
+      }
+    ]
+  },
+  "knowledge_graph": {
+    "title": " Everything Everywhere All at Once ",
+    "type": "R 2022 ‧ Sci-fi/Adventure ‧ 2h 19m",
+    "description": "When an interdimensional rupture unravels reality, an unlikely hero must channel her newfound powers to fight bizarre and bewildering dangers from the multiverse as the fate of the world hangs in the balance.",
+    "release_date": "April 8, 2022 (USA)",
+    "release_date_links": [
+      {
+        "text": "USA",
+        "link": "https://www.google.com/search?ucbcb=1&q=United+States&stick=H4sIAAAAAAAAAOPgE-LVT9c3NEwrKrSszDYvU-LUz9U3sEw2LzfQMspOttJPy8zJBRNWJRmpiSVFmcmJOQpFqemZ-XkKieWJRalATk5qYnGqQkpiSeoiVt7QvMyS1BSF4BIgt3gHK-MudiYOBgDGuL5taAAAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QmxMoAHoECFwQAg"
+      }
+    ],
+    "directors": "Daniel Kwan, Daniel Scheinert",
+    "directors_links": [
+      {
+        "text": "Daniel Kwan",
+        "link": "https://www.google.com/search?ucbcb=1&q=Daniel+Kwan&si=AMnBZoG3cRyxvViEiVWeqgrn-CuWcnxp6_6_G7EH225wAKYHQp3WN6WX6_kzgaj_pXPGmzmjsf7vaKOKLiTWw1AP0CnuunaSfcwi8fSF61pheoe_V87Zuzq5KJRJ7HKLgoQQPt2jCbz26qOrWCOTXan2xHNccODidLQe1M6Wq315Zd9kC3ud2fZ3ui4DpGsp1qusyvfDC_icA3xzKCdmgqmX0NLZRTDU90ad1in0OS45LR7oUGAU215c9OMHRCw4im1D5KTwPaCee4DNTOCc6J9ulzhY7xkBcbVNgTCpDx8iI0YT0AZrA28%3D&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QmxMoAHoECF8QAg"
+      },
+      {
+        "text": "Daniel Scheinert",
+        "link": "https://www.google.com/search?ucbcb=1&q=Daniel+Scheinert&si=AMnBZoG3cRyxvViEiVWeqgrn-CuWcnxp6_6_G7EH225wAKYHQgKndTavKgQenJK9CsxtWW_iiu3jhCe0zFB3g5h8Dp2Jvx_Pi0SHg4MgJEvrTCu4cpJLJXH7t98VEvEVvVD8XfTZpGq15JvWHSbeH_ZHH49AD4YSQnDb8LYz1N3UgkDWe6q9oYb_HUdHxeqzEcdXq_WTEECHeDJjyq4OXnZmSk2dqTUmRCLm7eoBSjrhHpMT4mR2u72Yk6qMI2RgW9ChQWUYQZssdqrRJ3QWiasVzja4NP2GAaH1n-UcbBjHsmmUJ6OFG7g%3D&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QmxMoAXoECF8QAw"
+      }
+    ],
+    "box_office": "135.7 million USD",
+    "awards": "Academy Award for Best Picture, MORE",
+    "awards_links": [
+      {
+        "text": "Academy Award for Best Picture",
+        "link": "https://www.google.com/search?ucbcb=1&q=Academy+Award+for+Best+Picture&si=AMnBZoFk_ppfOKgdccwTD_PVhdkg37dbl-p8zEtOPijkCaIHMqYcd9KGWj9wRqQtGBsySONXEkxcFY9Un11qg_sjI0Gv4oH-kzjtoNd4O9utf786x_4ivcV4XP14yhPkvMh-1cmOEG408vuhxS7UtrYAVZevmDPtLhcLk8yIUERo9kEZ1YLoQniw-5vhZb-O9kBo0-1WIY2A3-mrdVnN8EEpbMiYi8B7Rgm7WLU0IZdCzznoB0H-AlpJY9pfODObpbUtsWyuN9zqK0Ty7208UwPpqXwSEb8XG6nngM9eyKdHTslyLp8XWas%3D&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QmxMoAHoECGEQAg"
+      }
+    ],
+    "nominations": "Academy Award for Best Picture",
+    "nominations_links": [
+      {
+        "text": "Academy Award for Best Picture",
+        "link": "https://www.google.com/search?ucbcb=1&q=Academy+Award+for+Best+Picture&si=AMnBZoFk_ppfOKgdccwTD_PVhdkg37dbl-p8zEtOPijkCaIHMqYcd9KGWj9wRqQtGBsySONXEkxcFY9Un11qg_sjI0GvWmZr_quFqY24OKLtHgV8268f95Nn1GABW0iKFD6cjgRaAcDf4I0tS1LjFzgLhVeKWvF9wtv14DV2_pn4s7B9kHW4RiSS5isOPfbytIEJUJBh3731pG61Oga8IRKP6sLlFLDtYLoJVWJG73o1wxu18OgVH7lVP_V2GLIw8T9jZ1YjtWXPD0uMEpkfdl0lZGxRegWunKAJ7JB29yDXGi_59mNkoQs%3D&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QmxMoAHoECGAQAg"
+      },
+      {
+        "text": "MORE",
+        "link": "https://www.google.com/search?ucbcb=1&q=everything+everywhere+all+at+once+nominations&stick=H4sIAAAAAAAAAOPgE-LVT9c3NEwrKrSszDYv01LKTrbSTyxPLEqBkPHlmXl5qUVWefm5mXmJJZn5ecWLWHVTy1KLKksyMvPSFcDM8ozUolSFxJwchcQShfy85FQFJPUAZckL8GUAAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8Q44YBKAF6BAhgEAM"
+      }
+    ],
+    "art_director": "Amelia Brooke",
+    "art_director_links": [
+      {
+        "text": "Amelia Brooke",
+        "link": "https://www.google.com/search?ucbcb=1&q=Amelia+Brooke&si=AMnBZoEZ8aFftZu792frFYrnK9KQYGXRL3UTeDeHB9-uc0sfFXrepSUvjPnaktdu7rAeGW7G8YuVA_9TbuSErQK6duHSq-VEU29-YFMQzB2SCx9DNr7xDhkIkLqzuNFjg-x8_MJjhGgIlqNSeJVBGyejEKOWYC25d-fOteb-8feuI3XQOswGa2ha5NPnD9pP32IKvNXJS_fYteTdtTJhf58oQqCWbJZEug%3D%3D&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QmxMoAHoECFoQAg"
+      }
+    ],
+    "editorial_reviews": [
+      {
+        "title": "IMDb",
+        "rating": "7.9/10",
+        "link": "https://www.imdb.com/title/tt6710474/"
+      },
+      {
+        "title": "Rotten Tomatoes",
+        "rating": "94%",
+        "link": "https://www.rottentomatoes.com/m/everything_everywhere_all_at_once"
+      },
+      {
+        "title": "Metacritic",
+        "rating": "81%",
+        "link": "https://www.metacritic.com/movie/everything-everywhere-all-at-once"
+      }
+    ],
+    "clip": {
+      "title": "Everything Everywhere All At Once | Official Trailer HD | A242:42",
+      "link": "https://www.youtube.com/watch?v=wxN1T1uxQ2g",
+      "duration": "2:42",
+      "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/ea732b7cbd482806b5cda4f37cb72cbc5b8bf9e9a2c403b753306811e28a2cbb.jpeg"
+    },
+    "audience_reviews": [
+      {
+        "rating": 5.0,
+        "summary": "This movie is easily going on my top 10 favorites of all time list. I absolutely love the concept of the multiverse, and all the ..."
+      },
+      {
+        "rating": 5.0,
+        "summary": "ATTENTION ALL! Go see “Everything, Everywhere, All At Once”: an insanely enjoyable, absurd, hilarious, profound, ..."
+      }
+    ],
+    "user_statistics": {
+      "platform": "Google users",
+      "statistic": "80% liked this movie"
+    },
+    "watch_now": [
+      {
+        "name": "Watch now Primetime subscription",
+        "link": "https://www.youtube.com/attribution_link?utm_campaign=ytcore&yt_product=ytalc&yt_goal=acq&utm_source=int&utm_medium=gs&utm_content=ump&yt_campaign_id=ytalc22&c=ytcore-ytalc-acq-int-gs-ump-ytalc22&utm_term=video&u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dc8v41PzvL58",
+        "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/ea732b7cbd482806b5cda4f37cb72cbca45b82723967a886f424c35a3d5f578b14f4d5028e9816e2.png"
+      }
+    ],
+    "cast": [
+      {
+        "name": "Michelle Yeoh (Evelyn Quan Wang)",
+        "extensions": [
+          "Evelyn Quan Wang"
+        ],
+        "link": "https://www.google.com/search?ucbcb=1&q=Michelle+Yeoh&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU-LUz9U3MDSqzC7R4vHNL8tMDcl3TC7JL1rEyuubmZyRmpOTqhCZmp8BANg5rug6AAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QxA16BAhTEAM",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=Michelle+Yeoh&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU-LUz9U3MDSqzC7R4vHNL8tMDcl3TC7JL1rEyuubmZyRmpOTqhCZmp8BANg5rug6AAAA",
+        "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/ea732b7cbd482806b5cda4f37cb72cbc2aac2a0fb364fd6ce276ffb63abb637a.jpeg"
+      },
+      {
+        "name": "Jamie Lee Curtis (Deirdre Beaubeirdre)",
+        "extensions": [
+          "Deirdre Beaubeirdre"
+        ],
+        "link": "https://www.google.com/search?ucbcb=1&q=Jamie+Lee+Curtis&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU-LQz9U3yCgvrNLi8c0vy0wNyXdMLskvWsQq4JWYm5mq4JOaquBcWlSSWQwAZam4GDwAAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QxA16BAhTEAU",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=Jamie+Lee+Curtis&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU-LQz9U3yCgvrNLi8c0vy0wNyXdMLskvWsQq4JWYm5mq4JOaquBcWlSSWQwAZam4GDwAAAA",
+        "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/ea732b7cbd482806b5cda4f37cb72cbceaefe3d9ed99d0135d2b3f08dbff8b8d.jpeg"
+      },
+      {
+        "name": "Ke Huy Quan (Waymond Wang)",
+        "extensions": [
+          "Waymond Wang"
+        ],
+        "link": "https://www.google.com/search?ucbcb=1&q=Ke+Huy+Quan&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU-LUz9U3MMxLKy7S4vHNL8tMDcl3TC7JL1rEyu2dquBRWqkQWJqYBwAQ3gBJOAAAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QxA16BAhTEAc",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=Ke+Huy+Quan&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU-LUz9U3MMxLKy7S4vHNL8tMDcl3TC7JL1rEyu2dquBRWqkQWJqYBwAQ3gBJOAAAAA",
+        "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/ea732b7cbd482806b5cda4f37cb72cbcb63ecd1707e3568ba72efa342ecbf2ef.jpeg"
+      },
+      {
+        "name": "Stephanie Hsu (Joy Wang, Jobu Tupaki)",
+        "extensions": [
+          "Joy Wang, Jobu Tupaki"
+        ],
+        "link": "https://www.google.com/search?ucbcb=1&q=Stephanie+Hsu&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU-LSz9U3KCtIKysu0eLxzS_LTA3Jd0wuyS9axMobXJJakJGYl5mq4FFcCgBAS-R-OwAAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QxA16BAhTEAk",
+        "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=Stephanie+Hsu&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU-LSz9U3KCtIKysu0eLxzS_LTA3Jd0wuyS9axMobXJJakJGYl5mq4FFcCgBAS-R-OwAAAA",
+        "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/ea732b7cbd482806b5cda4f37cb72cbc62e13af965419e083af91ebdf0170be3.jpeg"
+      }
+    ]
+  },
+  "inline_videos": [
+    {
+      "position": 1,
+      "title": "Oscars 2023: 'Everything Everywhere All at Once' wins best ...",
+      "link": "https://www.google.com#fpstate=ive&vld=cid:08d92f75,vid:7StvE1kPlNo",
+      "thumbnail": "https://i.ytimg.com/vi/7StvE1kPlNo/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3kTZyAUcMyr1j7Q14UXmAr7IRIO-Q",
+      "channel": "ABC 7 Chicago",
+      "duration": "3:05",
+      "platform": "YouTube",
+      "date": "1 month ago"
+    },
+    {
+      "position": 2,
+      "title": "Presenting the 2023 Best Picture Nominees | Oscars95",
+      "link": "https://www.google.com#fpstate=ive&vld=cid:4be536a0,vid:hPXERpDTf5o",
+      "thumbnail": "https://i.ytimg.com/vi/hPXERpDTf5o/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3lmWgHQem_zsmmsZdXtTqc0_FotMQ",
+      "channel": "Oscars",
+      "duration": "2:14",
+      "platform": "YouTube",
+      "date": "1 month ago"
+    },
+    {
+      "position": 3,
+      "title": "'Everything Everywhere All at Once' wins Best Picture at ...",
+      "link": "https://www.google.com#fpstate=ive&vld=cid:168202a9,vid:Cox1pEs9m7w",
+      "thumbnail": "https://i.ytimg.com/vi/Cox1pEs9m7w/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3nGhhWMbVwNN2nzU6x0XMnh2JxLvw",
+      "channel": "Good Morning America",
+      "duration": "4:16",
+      "platform": "YouTube",
+      "date": "1 month ago"
+    },
+    {
+      "position": 4,
+      "title": "Best picture spotlight: Which film will win big at 2023's Oscars?",
+      "link": "https://www.google.com#fpstate=ive&vld=cid:1817241c,vid:l-ei_hYIi5k",
+      "thumbnail": "https://i.ytimg.com/vi/l-ei_hYIi5k/mqdefault.jpg?sqp=-oaymwEFCJQBEFM&rs=AMzJL3mRb4e4lJlGFUPPe9tLH2Zpiq-AGw",
+      "channel": "Al Jazeera English",
+      "duration": "2:24",
+      "platform": "YouTube",
+      "date": "1 month ago"
+    }
+  ],
+  "related_questions": [
+    {
+      "question": "What movie won the Oscars for best picture in 2023?",
+      "snippet": "\"Everything Everywhere All at Once\" completed its sweep of major industry awards at the 95th Academy Awards Sunday night. The genre-defying film took home the Oscars for best picture and best director, and several cast members earned individual acting awards.",
+      "title": "Oscars 2023: List of winners and nominees - CBS News",
+      "date": "Mar 13, 2023",
+      "link": "https://www.cbsnews.com/news/oscars-2023-winners-list-nominees/",
+      "displayed_link": "https://www.cbsnews.com › Entertainment",
+      "thumbnail": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/3a94116c37cb58759346e4c1c4d8069b7ca1ae6e55dca7f014a34568beb0ea9d.png",
+      "next_page_token": "eyJvbnMiOiIxMDA0MSIsImZjIjoiRW9zQkNreEJSWE0zYWs1U04zTnpOSFo2ZUZWMFMxOXpka0Y2UmxGbE5tdDVObXhKYVZSd1MwZFRWemxGU0VaclJtVmxhMFZJUkhoTVJFcDVTVTFJZEdsdGJrczJlQzExY20weU5uVk5XRUZ0RWhkNVlrMHhXbEJ1T0U4M2FWcHdkRkZRT1RsdFZTMUJZeG9pUVU4dE1ISnNOVEJ6VjFSc1VFeHNZazB6YzBORlVXNVNWSGhyT1RJMVlWZEZVUSIsImZjdiI6IjMiLCJlaSI6InliTTFaUG44TzdpWnB0UVA5OW1VLUFjIiwicWMiOiJDaU4zYUdGMElHMXZkbWxsSUhkdmJpQmlaWE4wSUhCcFkzUjFjbVVnYVc0Z01qQXlNeEFBZmV0X0tUOCIsInF1ZXN0aW9uIjoiV2hhdCBtb3ZpZSB3b24gdGhlIE9zY2FycyBmb3IgYmVzdCBwaWN0dXJlIGluIDIwMjM/IiwibGsiOiJHaHh2YzJOaGNuTWdNakF5TXlCbWIzSWdZbVZ6ZENCd2FXTjBkWEpsIiwiYnMiOiJjLU95NERJT3owZ3NVY2pOTDh0TVZTalB6MU1veVVoVjhDOU9UaXdxVmtqTEwxSklTaTB1VVNqSVRDNHBMVXBWeU14VE1ESXdNcmFYV09mSnBjZ2xFNTZScjVDZVh3SlJycEJZbmxpVWdsQ3lySmhMalVzUllYaXhRbmxtVGc2UXlJTVpEMUYzVllYTGlzc1VXVjBpMEthOF9Oek12TVNTMUJTRUk5enlpMUl6MF9NVTBqSnpjcUY2RzRNRUdBRSIsImlkIjoiZmNfMSJ9",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_related_questions&google_domain=google.com&next_page_token=eyJvbnMiOiIxMDA0MSIsImZjIjoiRW9zQkNreEJSWE0zYWs1U04zTnpOSFo2ZUZWMFMxOXpka0Y2UmxGbE5tdDVObXhKYVZSd1MwZFRWemxGU0VaclJtVmxhMFZJUkhoTVJFcDVTVTFJZEdsdGJrczJlQzExY20weU5uVk5XRUZ0RWhkNVlrMHhXbEJ1T0U4M2FWcHdkRkZRT1RsdFZTMUJZeG9pUVU4dE1ISnNOVEJ6VjFSc1VFeHNZazB6YzBORlVXNVNWSGhyT1RJMVlWZEZVUSIsImZjdiI6IjMiLCJlaSI6InliTTFaUG44TzdpWnB0UVA5OW1VLUFjIiwicWMiOiJDaU4zYUdGMElHMXZkbWxsSUhkdmJpQmlaWE4wSUhCcFkzUjFjbVVnYVc0Z01qQXlNeEFBZmV0X0tUOCIsInF1ZXN0aW9uIjoiV2hhdCBtb3ZpZSB3b24gdGhlIE9zY2FycyBmb3IgYmVzdCBwaWN0dXJlIGluIDIwMjM%2FIiwibGsiOiJHaHh2YzJOaGNuTWdNakF5TXlCbWIzSWdZbVZ6ZENCd2FXTjBkWEpsIiwiYnMiOiJjLU95NERJT3owZ3NVY2pOTDh0TVZTalB6MU1veVVoVjhDOU9UaXdxVmtqTEwxSklTaTB1VVNqSVRDNHBMVXBWeU14VE1ESXdNcmFYV09mSnBjZ2xFNTZScjVDZVh3SlJycEJZbmxpVWdsQ3lySmhMalVzUllYaXhRbmxtVGc2UXlJTVpEMUYzVllYTGlzc1VXVjBpMEthOF9Oek12TVNTMUJTRUk5enlpMUl6MF9NVTBqSnpjcUY2RzRNRUdBRSIsImlkIjoiZmNfMSJ9"
+    },
+    {
+      "question": "Who got Oscar award in 2023?",
+      "snippet": "It was a big night for India as the country bagged its first Oscar of 2023 by winning Best Documentary Short Film for 'The Elephant Whisperers'. Later, the team of 'RRR' made the country proud by taking home the Best Music (Original Song) for 'Naatu Naatu'.",
+      "title": "Oscars 2023 complete list of winners: 'Everything' takes every award ...",
+      "date": "Mar 14, 2023",
+      "link": "https://m.economictimes.com/magazines/panache/oscars-2023-complete-list-of-winners-who-won-what-at-the-academy-awards/articleshow/98591488.cms",
+      "displayed_link": "https://m.economictimes.com › panache › articleshow",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT77d1ZPr3LV4GGj66hNzP5zuIWsiXhQTndExgdRrNag&s",
+      "next_page_token": "eyJvbnMiOiIxMDA0MSIsImZjIjoiRW9zQkNreEJSWE0zYWs1U04zTnpOSFo2ZUZWMFMxOXpka0Y2UmxGbE5tdDVObXhKYVZSd1MwZFRWemxGU0VaclJtVmxhMFZJUkhoTVJFcDVTVTFJZEdsdGJrczJlQzExY20weU5uVk5XRUZ0RWhkNVlrMHhXbEJ1T0U4M2FWcHdkRkZRT1RsdFZTMUJZeG9pUVU4dE1ISnNOVEJ6VjFSc1VFeHNZazB6YzBORlVXNVNWSGhyT1RJMVlWZEZVUSIsImZjdiI6IjMiLCJlaSI6InliTTFaUG44TzdpWnB0UVA5OW1VLUFjIiwicWMiOiJDaU4zYUdGMElHMXZkbWxsSUhkdmJpQmlaWE4wSUhCcFkzUjFjbVVnYVc0Z01qQXlNeEFBZmV0X0tUOCIsInF1ZXN0aW9uIjoiV2hvIGdvdCBPc2NhciBhd2FyZCBpbiAyMDIzPyIsImxrIjoiR2h0M2FHOGdaMjkwSUc5elkyRnlJR0YzWVhKa0lHbHVJREl3TWpNIiwiYnMiOiJjLU95NERJT3owZ3NVY2pOTDh0TVZTalB6MU1veVVoVjhDOU9UaXdxVmtqTEwxSklTaTB1VVNqSVRDNHBMVXBWeU14VE1ESXdNcmFYV09mSnBjZ2xFNTZScjVDZVh3SlJycEJZbmxpVWdsQ3lySmhMalVzUllYaXhRbmxtVGc2UXlJTVpEMUYzVllYTGlzc1VXVjBpMEthOF9Oek12TVNTMUJTRUk5enlpMUl6MF9NVTBqSnpjcUY2RzRNRUdBRSIsImlkIjoiZmNfMSJ9",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_related_questions&google_domain=google.com&next_page_token=eyJvbnMiOiIxMDA0MSIsImZjIjoiRW9zQkNreEJSWE0zYWs1U04zTnpOSFo2ZUZWMFMxOXpka0Y2UmxGbE5tdDVObXhKYVZSd1MwZFRWemxGU0VaclJtVmxhMFZJUkhoTVJFcDVTVTFJZEdsdGJrczJlQzExY20weU5uVk5XRUZ0RWhkNVlrMHhXbEJ1T0U4M2FWcHdkRkZRT1RsdFZTMUJZeG9pUVU4dE1ISnNOVEJ6VjFSc1VFeHNZazB6YzBORlVXNVNWSGhyT1RJMVlWZEZVUSIsImZjdiI6IjMiLCJlaSI6InliTTFaUG44TzdpWnB0UVA5OW1VLUFjIiwicWMiOiJDaU4zYUdGMElHMXZkbWxsSUhkdmJpQmlaWE4wSUhCcFkzUjFjbVVnYVc0Z01qQXlNeEFBZmV0X0tUOCIsInF1ZXN0aW9uIjoiV2hvIGdvdCBPc2NhciBhd2FyZCBpbiAyMDIzPyIsImxrIjoiR2h0M2FHOGdaMjkwSUc5elkyRnlJR0YzWVhKa0lHbHVJREl3TWpNIiwiYnMiOiJjLU95NERJT3owZ3NVY2pOTDh0TVZTalB6MU1veVVoVjhDOU9UaXdxVmtqTEwxSklTaTB1VVNqSVRDNHBMVXBWeU14VE1ESXdNcmFYV09mSnBjZ2xFNTZScjVDZVh3SlJycEJZbmxpVWdsQ3lySmhMalVzUllYaXhRbmxtVGc2UXlJTVpEMUYzVllYTGlzc1VXVjBpMEthOF9Oek12TVNTMUJTRUk5enlpMUl6MF9NVTBqSnpjcUY2RzRNRUdBRSIsImlkIjoiZmNfMSJ9"
+    },
+    {
+      "question": "What movies will win Oscars 2023?",
+      "title": "Everything Everywhere All at Once",
+      "date": "Mar 10, 2023",
+      "link": "https://ew.com/awards/oscars/2023-oscars-predictions-winners/",
+      "list": [
+        "Everything Everywhere All at Once.",
+        "The Banshees of Inisherin.",
+        "The Fabelmans.",
+        "All Quiet on the Western Front.",
+        "TÁR.",
+        "Elvis.",
+        "Triangle of Sadness.",
+        "Top Gun: Maverick."
+      ],
+      "displayed_link": "https://ew.com › awards › 2023-oscars-predictions-winners",
+      "thumbnail": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/3a94116c37cb58759346e4c1c4d8069b8eac2fb6447bd71af72915106231e175.png",
+      "next_page_token": "eyJvbnMiOiIxMDA0MSIsImZjIjoiRW9zQkNreEJSWE0zYWs1U04zTnpOSFo2ZUZWMFMxOXpka0Y2UmxGbE5tdDVObXhKYVZSd1MwZFRWemxGU0VaclJtVmxhMFZJUkhoTVJFcDVTVTFJZEdsdGJrczJlQzExY20weU5uVk5XRUZ0RWhkNVlrMHhXbEJ1T0U4M2FWcHdkRkZRT1RsdFZTMUJZeG9pUVU4dE1ISnNOVEJ6VjFSc1VFeHNZazB6YzBORlVXNVNWSGhyT1RJMVlWZEZVUSIsImZjdiI6IjMiLCJlaSI6InliTTFaUG44TzdpWnB0UVA5OW1VLUFjIiwicWMiOiJDaU4zYUdGMElHMXZkbWxsSUhkdmJpQmlaWE4wSUhCcFkzUjFjbVVnYVc0Z01qQXlNeEFBZmV0X0tUOCIsInF1ZXN0aW9uIjoiV2hhdCBtb3ZpZXMgd2lsbCB3aW4gT3NjYXJzIDIwMjM/IiwibGsiOiJHaUIzYUdGMElHMXZkbWxsY3lCM2FXeHNJSGRwYmlCdmMyTmhjbk1nTWpBeU13IiwiYnMiOiJjLU95NERJT3owZ3NVY2pOTDh0TVZTalB6MU1veVVoVjhDOU9UaXdxVmtqTEwxSklTaTB1VVNqSVRDNHBMVXBWeU14VE1ESXdNcmFYV09mSnBjZ2xFNTZScjVDZVh3SlJycEJZbmxpVWdsQ3lySmhMalVzUllYaXhRbmxtVGc2UXlJTVpEMUYzVllYTGlzc1VXVjBpMEthOF9Oek12TVNTMUJTRUk5enlpMUl6MF9NVTBqSnpjcUY2RzRNRUdBRSIsImlkIjoiZmNfMSJ9",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_related_questions&google_domain=google.com&next_page_token=eyJvbnMiOiIxMDA0MSIsImZjIjoiRW9zQkNreEJSWE0zYWs1U04zTnpOSFo2ZUZWMFMxOXpka0Y2UmxGbE5tdDVObXhKYVZSd1MwZFRWemxGU0VaclJtVmxhMFZJUkhoTVJFcDVTVTFJZEdsdGJrczJlQzExY20weU5uVk5XRUZ0RWhkNVlrMHhXbEJ1T0U4M2FWcHdkRkZRT1RsdFZTMUJZeG9pUVU4dE1ISnNOVEJ6VjFSc1VFeHNZazB6YzBORlVXNVNWSGhyT1RJMVlWZEZVUSIsImZjdiI6IjMiLCJlaSI6InliTTFaUG44TzdpWnB0UVA5OW1VLUFjIiwicWMiOiJDaU4zYUdGMElHMXZkbWxsSUhkdmJpQmlaWE4wSUhCcFkzUjFjbVVnYVc0Z01qQXlNeEFBZmV0X0tUOCIsInF1ZXN0aW9uIjoiV2hhdCBtb3ZpZXMgd2lsbCB3aW4gT3NjYXJzIDIwMjM%2FIiwibGsiOiJHaUIzYUdGMElHMXZkbWxsY3lCM2FXeHNJSGRwYmlCdmMyTmhjbk1nTWpBeU13IiwiYnMiOiJjLU95NERJT3owZ3NVY2pOTDh0TVZTalB6MU1veVVoVjhDOU9UaXdxVmtqTEwxSklTaTB1VVNqSVRDNHBMVXBWeU14VE1ESXdNcmFYV09mSnBjZ2xFNTZScjVDZVh3SlJycEJZbmxpVWdsQ3lySmhMalVzUllYaXhRbmxtVGc2UXlJTVpEMUYzVllYTGlzc1VXVjBpMEthOF9Oek12TVNTMUJTRUk5enlpMUl6MF9NVTBqSnpjcUY2RzRNRUdBRSIsImlkIjoiZmNfMSJ9"
+    },
+    {
+      "question": "What movies are nominated for best Foreign film 2023?",
+      "title": "In terms of the category of International Feature here are the nominations for 2023:",
+      "date": "Mar 11, 2023",
+      "link": "https://en.as.com/latest_news/which-foreign-movies-are-nominated-for-the-2023-oscars-n/",
+      "list": [
+        "“All Quiet on the Western Front”, Germany.",
+        "“Argentina, 1985″, Argentina.",
+        "“Close”, Belgium.",
+        "“EO”, Poland.",
+        "“The Quiet Girl”, Ireland."
+      ],
+      "displayed_link": "https://en.as.com › latest_news › which-foreign-movies-a...",
+      "thumbnail": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/3a94116c37cb58759346e4c1c4d8069b7e9877a737b3daf9b59e306c684e318b.png",
+      "next_page_token": "eyJvbnMiOiIxMDA0MSIsImZjIjoiRW9zQkNreEJSWE0zYWs1U04zTnpOSFo2ZUZWMFMxOXpka0Y2UmxGbE5tdDVObXhKYVZSd1MwZFRWemxGU0VaclJtVmxhMFZJUkhoTVJFcDVTVTFJZEdsdGJrczJlQzExY20weU5uVk5XRUZ0RWhkNVlrMHhXbEJ1T0U4M2FWcHdkRkZRT1RsdFZTMUJZeG9pUVU4dE1ISnNOVEJ6VjFSc1VFeHNZazB6YzBORlVXNVNWSGhyT1RJMVlWZEZVUSIsImZjdiI6IjMiLCJlaSI6InliTTFaUG44TzdpWnB0UVA5OW1VLUFjIiwicWMiOiJDaU4zYUdGMElHMXZkbWxsSUhkdmJpQmlaWE4wSUhCcFkzUjFjbVVnYVc0Z01qQXlNeEFBZmV0X0tUOCIsInF1ZXN0aW9uIjoiV2hhdCBtb3ZpZXMgYXJlIG5vbWluYXRlZCBmb3IgYmVzdCBGb3JlaWduIGZpbG0gMjAyMz8iLCJsayI6ImM1TXlLYzlJTEZISXpTX0xUQzFXU0N4S1Zjakx6ODNNU3l4SlRWRkl5eTlTU0VvdExnRXhValBUOHhUU01uTnlGWXdNakl3QiIsImJzIjoiYy1PeTRESU96MGdzVWNqTkw4dE1WU2pQejFNb3lVaFY4QzlPVGl3cVZrakxMMUpJU2kwdVVTaklUQzRwTFVwVnlNeFRNREl3TXJhWFdPZkpwY2dsRTU2UnI1Q2VYd0pScnBCWW5saVVnbEN5ckpoTGpVc1JZWGl4UW5sbVRnNlF5SU1aRDFGM1ZZWExpc3NVV1YwaTBLYThfTnpNdk1TUzFCU0VJOXp5aTFJejBfTVUwakp6Y3FGNkc0TUVHQUUiLCJpZCI6ImZjXzEifQ==",
+      "serpapi_link": "https://serpapi.com/search.json?device=desktop&engine=google_related_questions&google_domain=google.com&next_page_token=eyJvbnMiOiIxMDA0MSIsImZjIjoiRW9zQkNreEJSWE0zYWs1U04zTnpOSFo2ZUZWMFMxOXpka0Y2UmxGbE5tdDVObXhKYVZSd1MwZFRWemxGU0VaclJtVmxhMFZJUkhoTVJFcDVTVTFJZEdsdGJrczJlQzExY20weU5uVk5XRUZ0RWhkNVlrMHhXbEJ1T0U4M2FWcHdkRkZRT1RsdFZTMUJZeG9pUVU4dE1ISnNOVEJ6VjFSc1VFeHNZazB6YzBORlVXNVNWSGhyT1RJMVlWZEZVUSIsImZjdiI6IjMiLCJlaSI6InliTTFaUG44TzdpWnB0UVA5OW1VLUFjIiwicWMiOiJDaU4zYUdGMElHMXZkbWxsSUhkdmJpQmlaWE4wSUhCcFkzUjFjbVVnYVc0Z01qQXlNeEFBZmV0X0tUOCIsInF1ZXN0aW9uIjoiV2hhdCBtb3ZpZXMgYXJlIG5vbWluYXRlZCBmb3IgYmVzdCBGb3JlaWduIGZpbG0gMjAyMz8iLCJsayI6ImM1TXlLYzlJTEZISXpTX0xUQzFXU0N4S1Zjakx6ODNNU3l4SlRWRkl5eTlTU0VvdExnRXhValBUOHhUU01uTnlGWXdNakl3QiIsImJzIjoiYy1PeTRESU96MGdzVWNqTkw4dE1WU2pQejFNb3lVaFY4QzlPVGl3cVZrakxMMUpJU2kwdVVTaklUQzRwTFVwVnlNeFRNREl3TXJhWFdPZkpwY2dsRTU2UnI1Q2VYd0pScnBCWW5saVVnbEN5ckpoTGpVc1JZWGl4UW5sbVRnNlF5SU1aRDFGM1ZZWExpc3NVV1YwaTBLYThfTnpNdk1TUzFCU0VJOXp5aTFJejBfTVUwakp6Y3FGNkc0TUVHQUUiLCJpZCI6ImZjXzEifQ%3D%3D"
+    }
+  ],
+  "answer_box": {
+    "type": "organic_result",
+    "title": "Academy Award for Best Picture/Winners (2023)",
+    "link": "https://www.cnn.com/entertainment/live-news/oscars-2023/index.html",
+    "displayed_link": "https://www.cnn.com › entertainment › live-news › oscar...",
+    "date": "Mar 13, 2023",
+    "snippet": "'Everything Everywhere All At Once' wins best picture at 2023 Oscars.",
+    "snippet_highlighted_words": [
+      "Everything Everywhere All At Once"
+    ],
+    "answer": "Everything Everywhere All at Once",
+    "thumbnail": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/9bdf5ebdf49028b3cf7b45395020c08e73978d3ebcd19362.jpeg",
+    "people_also_search_for": [
+      {
+        "name": "The Whale",
+        "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/9bdf5ebdf49028b3b7baa21f0294f92780d75ccb744eb3848ecf1e742350c21faee0d5894d1bf4e871a20055168c40fd.jpeg",
+        "link": "https://www.google.com/search?ucbcb=1&q=The+Whale&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU4JwC0zN0k0MDSu0eH3zyzJTgzNTUssTK4sXsXKGZKQqhGck5qQCAL3Li9c7AAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QxA16BAgeEAQ"
+      },
+      {
+        "name": "The Banshees of Inishe...",
+        "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/9bdf5ebdf49028b3b7baa21f0294f92780d75ccb744eb3848ecf1e742350c21fb6acb5163d02671277ded00cee56db74.jpeg",
+        "link": "https://www.google.com/search?ucbcb=1&q=The+Banshees+of+Inisherin&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU4JwC9PTknLjc6q0eH3zyzJTgzNTUssTK4sXsUqGZKQqOCXmFWekphYr5KcpeOZlAtlFmXkA1ckvE0sAAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QxA16BAgeEAY"
+      },
+      {
+        "name": "Tár",
+        "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/9bdf5ebdf49028b3b7baa21f0294f92780d75ccb744eb3848ecf1e742350c21fb0dc78e9a2fee839198268e4050b601d.jpeg",
+        "link": "https://www.google.com/search?ucbcb=1&q=T%C3%A1r&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU4JwCzOM4wvyci21eH3zyzJTgzNTUssTK4sXsbKEHF5YBAD0nOFBNgAAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QxA16BAgeEAg"
+      },
+      {
+        "name": "All Quiet on the Western...",
+        "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/9bdf5ebdf49028b3b7baa21f0294f92780d75ccb744eb3848ecf1e742350c21f1afb456b1c58f9eb30917654cb0554ca.jpeg",
+        "link": "https://www.google.com/search?ucbcb=1&q=All+Quiet+on+the+Western+Front&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU4Jwi1JMM7LScnO1eH3zyzJTgzNTUssTK4sXsco55uQoBJZmppYo5OcplGSkKoSnFpekFuUpuBXl55UAACcTs8dQAAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QxA16BAgeEAo"
+      },
+      {
+        "name": "Women Talking",
+        "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/9bdf5ebdf49028b3b7baa21f0294f92780d75ccb744eb3848ecf1e742350c21fe6c901c651e010e163d2de45ec58b580.jpeg",
+        "link": "https://www.google.com/search?ucbcb=1&q=Women+Talking&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU4Jwi4qTCqsKLbO0eH3zyzJTgzNTUssTK4sXsfKG5-em5imEJOZkZ-alAwBMBCHGPwAAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QxA16BAgeEAw"
+      },
+      {
+        "name": "Top Gun: Maverick",
+        "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/9bdf5ebdf49028b3b7baa21f0294f92780d75ccb744eb3848ecf1e742350c21f4416d05a930dcd9451db02bc6e0cc933.jpeg",
+        "link": "https://www.google.com/search?ucbcb=1&q=Top+Gun+2&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU-LSz9U3yK0qyTay0OL1zS_LTA3OTEktT6wsXsTKGZJfoOBemqdgBABcCkNPOAAAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QxA16BAgeEA4"
+      },
+      {
+        "name": "The Fabelmans",
+        "image": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/9bdf5ebdf49028b3b7baa21f0294f92780d75ccb744eb3848ecf1e742350c21f13d24ee17fdff480bff172f0c4cdf0b6.jpeg",
+        "link": "https://www.google.com/search?ucbcb=1&q=The+Fabelmans&stick=H4sIAAAAAAAAAONgFuLVT9c3NEwrKrSszDYvU4Jw8yrSyo0r84q1eH3zyzJTgzNTUssTK4sXsfKGZKQquCUmpebkJuYVAwCuT_B_PwAAAA&sa=X&ved=2ahUKEwi5hfP0xqL-AhW4jIkEHfcsBX8QxA16BAgeEBA"
+      }
+    ],
+    "about_this_result": {
+      "source": {
+        "description": "CNN is a multinational news channel and website headquartered in Atlanta, Georgia, U.S. Founded in 1980 by American media proprietor Ted Turner and Reese Schonfeld as a 24-hour cable news channel, and ...",
+        "source_info_link": "https://www.cnn.com/entertainment/live-news/oscars-2023/index.html",
+        "security": "secure",
+        "icon": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/9bdf5ebdf49028b34957616abc0fc2628c819c6f2a3c3dfa5f9bee43570e9de4574ef0b46e9c81b5acd0555378ec781a.png"
+      },
+      "keywords": [
+        "what",
+        "movie",
+        "won",
+        "best",
+        "picture",
+        "2023"
+      ],
+      "related_keywords": [
+        "oscars"
+      ],
+      "languages": [
+        "English"
+      ],
+      "regions": [
+        "United States"
+      ]
+    },
+    "about_page_link": "https://www.google.com/search?q=About+https://www.cnn.com/entertainment/live-news/oscars-2023/index.html&tbm=ilp&ilps=ADJL0ixlqVW2rr-6iTZYWQzOOlC20LWePg"
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "title": "2023 | Oscars.org | Academy of Motion Picture Arts and ...",
+      "link": "https://www.oscars.org/oscars/ceremonies/2023",
+      "displayed_link": "https://www.oscars.org › oscars › ceremonies › 2023",
+      "snippet": "Nominees · All Quiet on the Western Front · The Batman · Black Panther: Wakanda Forever · Top Gun: Maverick.",
+      "snippet_highlighted_words": [
+        "The Batman"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "The Academy Awards, also known as the Oscars, are awards for artistic and technical merit for the film industry. They are presented annually by the Academy of Motion Picture Arts and Sciences, in recognition of excellence in cinematic achievements as assessed by the Academy's voting membership.",
+          "source_info_link": "https://www.oscars.org/oscars/ceremonies/2023",
+          "security": "secure",
+          "icon": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/401af550b734562a90f29b798cc8f32604fde2adb2dc3e082e4717301fc4ce6093dadcfb4c6d31f912e9814a5bec8011.png"
+        }
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.oscars.org/oscars/ceremonies/2023&tbm=ilp&ilps=ADJL0iwHlCPg8lr7MirGDTcjQDmHzwdF2Q",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&ilps=ADJL0iwHlCPg8lr7MirGDTcjQDmHzwdF2Q&q=About+https%3A%2F%2Fwww.oscars.org%2Foscars%2Fceremonies%2F2023",
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:i4_zBE8tUP8J:https://www.oscars.org/oscars/ceremonies/2023&cd=16&hl=en&ct=clnk&gl=us"
+    },
+    {
+      "position": 2,
+      "title": "'Everything' wins best picture, is everywhere at Oscars",
+      "link": "https://www.youtube.com/watch?v=w51wWuiqN8U",
+      "displayed_link": "https://www.youtube.com › watch",
+      "thumbnail": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/401af550b734562a90f29b798cc8f32603fbd2fa77902ef8a36833e164fc5681.jpeg",
+      "snippet": "... comedy \"Everything Everywhere All at Once\" wrapped its hot dog fingers around Hollywood's top prize Sunday, winning best picture ...",
+      "duration": "3:05",
+      "rich_snippet": {
+        "top": {
+          "extensions": [
+            "YouTube",
+            "6abc Philadelphia",
+            "1 month ago"
+          ],
+          "detected_extensions": {
+            "abc_philadelphia": 6,
+            "month_ago": 1
+          }
+        }
+      },
+      "about_this_result": {
+        "source": {
+          "description": "This result comes from www.youtube.com",
+          "source_info_link": "https://www.youtube.com/watch?v=w51wWuiqN8U",
+          "security": "secure",
+          "icon": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/401af550b734562a90f29b798cc8f326863a65e710fad1d43538ccfe8cd192ab749f968d03b9b0e7ca1ce78d7205d295.png"
+        }
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.youtube.com/watch?v%3Dw51wWuiqN8U&tbm=ilp&ilps=ADJL0ixgUV6WcqCg8Y2_kvI-2Szoko7Qpw",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&ilps=ADJL0ixgUV6WcqCg8Y2_kvI-2Szoko7Qpw&q=About+https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dw51wWuiqN8U",
+      "video_link": "https://encrypted-vtbn0.gstatic.com/video?q=tbn:ANd9GcRXAmd5MtrYojeLzo3yJdnu3_aC57Mg5k9kkw"
+    },
+    {
+      "position": 3,
+      "title": "'Everything Everywhere All at Once' Wins Best Picture at ...",
+      "link": "https://www.rollingstone.com/tv-movies/tv-movie-news/everything-everywhere-all-at-once-oscars-best-picture-1234692372/",
+      "displayed_link": "https://www.rollingstone.com › tv-movie-news › ever...",
+      "date": "Mar 12, 2023",
+      "snippet": "Everything Everywhere All at Once took home the Best Picture trophy at the Academy Awards on Sunday, bringing the film's total awards of the ...",
+      "snippet_highlighted_words": [
+        "Everything Everywhere All at Once"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Rolling Stone is an American monthly magazine that focuses on music, politics, and popular culture. It was founded in San Francisco, California, in 1967 by Jann Wenner, and the music critic Ralph J. Gleason. It was first known for its coverage of rock music and political reporting by Hunter S. Thompson.",
+          "source_info_link": "https://www.rollingstone.com/tv-movies/tv-movie-news/everything-everywhere-all-at-once-oscars-best-picture-1234692372/",
+          "security": "secure",
+          "icon": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/401af550b734562a90f29b798cc8f326a52c871f03cd0e3fa00e8f3ff2da26f66c75721d0c6535cf8c3f185341f0e899.png"
+        }
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.rollingstone.com/tv-movies/tv-movie-news/everything-everywhere-all-at-once-oscars-best-picture-1234692372/&tbm=ilp&ilps=ADJL0iwWPf4-2izd2EHAARIXIFqqGWL5WQ",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&ilps=ADJL0iwWPf4-2izd2EHAARIXIFqqGWL5WQ&q=About+https%3A%2F%2Fwww.rollingstone.com%2Ftv-movies%2Ftv-movie-news%2Feverything-everywhere-all-at-once-oscars-best-picture-1234692372%2F",
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:PI3rltQ9b9wJ:https://www.rollingstone.com/tv-movies/tv-movie-news/everything-everywhere-all-at-once-oscars-best-picture-1234692372/&cd=18&hl=en&ct=clnk&gl=us"
+    },
+    {
+      "position": 4,
+      "title": "2023 Oscars chose wrong best picture in 'Everything ...",
+      "link": "https://www.latimes.com/entertainment-arts/awards/story/2023-03-12/oscars-2023-everything-everywhere-all-at-once-best-picture",
+      "displayed_link": "https://www.latimes.com › awards › story › 2023-03-12",
+      "date": "Mar 12, 2023",
+      "snippet": "\"Everything Everywhere All at Once\" wins Best Picture at the 95th Academy Awards. “Everything Everywhere All at Once” wins Best Picture at the ...",
+      "snippet_highlighted_words": [
+        "Everything Everywhere All at Once"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "The Los Angeles Times, abbreviated as LA Times, is a daily newspaper that started publishing in Los Angeles in 1881. Based in the Los Angeles suburb of El Segundo since 2018, it is the sixth-largest newspaper by circulation in the United States. The publication has won more than 40 Pulitzer Prizes.",
+          "source_info_link": "https://www.latimes.com/entertainment-arts/awards/story/2023-03-12/oscars-2023-everything-everywhere-all-at-once-best-picture",
+          "security": "secure",
+          "icon": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/401af550b734562a90f29b798cc8f3262a157d23817cf5535b82193724cad6d4dc10d05d4cd8a4d68bcd6c97d2913e38.png"
+        }
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.latimes.com/entertainment-arts/awards/story/2023-03-12/oscars-2023-everything-everywhere-all-at-once-best-picture&tbm=ilp&ilps=ADJL0iy3WW3oa_pe6oOuTppXOMDuqMMFxA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&ilps=ADJL0iy3WW3oa_pe6oOuTppXOMDuqMMFxA&q=About+https%3A%2F%2Fwww.latimes.com%2Fentertainment-arts%2Fawards%2Fstory%2F2023-03-12%2Foscars-2023-everything-everywhere-all-at-once-best-picture"
+    },
+    {
+      "position": 5,
+      "title": "2023 Oscar Winners: The Full List",
+      "link": "https://www.hollywoodreporter.com/movies/movie-news/2023-oscars-winners-list-1235349224/",
+      "displayed_link": "https://www.hollywoodreporter.com › movie-news › 2...",
+      "date": "Mar 12, 2023",
+      "snippet": "'Everything Everywhere All at Once' won best picture; acting nods for Michelle Yeoh, Ke Huy Quan and Jamie Lee Curtis; and writing and directing ...",
+      "snippet_highlighted_words": [
+        "Everything Everywhere All at Once"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "The Hollywood Reporter is an American digital and print magazine which focuses on the Hollywood film, television, and entertainment industries. It was founded in 1930 as a daily trade paper, and in 2010 switched to a weekly large-format print magazine with a revamped website.",
+          "source_info_link": "https://www.hollywoodreporter.com/movies/movie-news/2023-oscars-winners-list-1235349224/",
+          "security": "secure",
+          "icon": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/401af550b734562a90f29b798cc8f326ad507edf7989c384bbaf30726a3811a4caa47f3c05898f8a6fff21ce82922f8c.png"
+        }
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.hollywoodreporter.com/movies/movie-news/2023-oscars-winners-list-1235349224/&tbm=ilp&ilps=ADJL0iwCRyawC0_InOU9vCKoYbbDcpIKfA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&ilps=ADJL0iwCRyawC0_InOU9vCKoYbbDcpIKfA&q=About+https%3A%2F%2Fwww.hollywoodreporter.com%2Fmovies%2Fmovie-news%2F2023-oscars-winners-list-1235349224%2F",
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:yMYhg6oDH5UJ:https://www.hollywoodreporter.com/movies/movie-news/2023-oscars-winners-list-1235349224/&cd=24&hl=en&ct=clnk&gl=us"
+    },
+    {
+      "position": 6,
+      "title": "Oscars 2023: Everything Everywhere All at Once ...",
+      "link": "https://variety.com/2023/awards/awards/oscar-winners-2023-list-1235548935/",
+      "displayed_link": "https://variety.com › oscar-winners-2023-list-1235548935",
+      "date": "Mar 12, 2023",
+      "snippet": "'Everything Everywhere All at Once' Dominates Oscars With Seven Wins, Including Best Picture (Full Winners List). By. Brent Lang, William Earl.",
+      "snippet_highlighted_words": [
+        "Everything Everywhere All at Once"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "Variety is an American media company owned by Penske Media Corporation. The company was founded by Sime Silverman in New York City in 1905 as a weekly newspaper reporting on theater and vaudeville. In 1933 it added Daily Variety, based in Los Angeles, to cover the motion-picture industry.",
+          "source_info_link": "https://variety.com/2023/awards/awards/oscar-winners-2023-list-1235548935/",
+          "security": "secure",
+          "icon": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/401af550b734562a90f29b798cc8f326dfbb5ce002f24131eb42757101cb8d6bb05f638bdd68206304768e795835274c.png"
+        }
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://variety.com/2023/awards/awards/oscar-winners-2023-list-1235548935/&tbm=ilp&ilps=ADJL0ixq8TqH0-2y9N8nxqQzgU4evMWnbA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&ilps=ADJL0ixq8TqH0-2y9N8nxqQzgU4evMWnbA&q=About+https%3A%2F%2Fvariety.com%2F2023%2Fawards%2Fawards%2Foscar-winners-2023-list-1235548935%2F"
+    },
+    {
+      "position": 7,
+      "title": "Oscars 2023: List of winners and nominees",
+      "link": "https://www.cbsnews.com/news/oscars-2023-winners-list-nominees/",
+      "displayed_link": "https://www.cbsnews.com › Entertainment",
+      "date": "Mar 13, 2023",
+      "snippet": "Best picture · \"Everything Everywhere All at Once\" — Winner · \"All Quiet on the Western Front\" · \"Avatar: The Way of Water\" · \"The Banshees of ...",
+      "snippet_highlighted_words": [
+        "Everything Everywhere All at Once"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "CBS News is the news division of the American television and radio service CBS. CBS News television programs include the CBS Evening News, CBS Mornings, news magazine programs CBS News Sunday Morning, 60 Minutes, and 48 Hours, and Sunday morning political affairs program Face the Nation.",
+          "source_info_link": "https://www.cbsnews.com/news/oscars-2023-winners-list-nominees/",
+          "security": "secure",
+          "icon": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/401af550b734562a90f29b798cc8f3266d3cbbd59d378f6b7630f74f50c15397cb3b25c9d81d48f6157b6e4596100486.png"
+        }
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.cbsnews.com/news/oscars-2023-winners-list-nominees/&tbm=ilp&ilps=ADJL0iy1dvWXjAmPXWzyc2T52JfhJ_znAg",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&ilps=ADJL0iy1dvWXjAmPXWzyc2T52JfhJ_znAg&q=About+https%3A%2F%2Fwww.cbsnews.com%2Fnews%2Foscars-2023-winners-list-nominees%2F",
+      "cached_page_link": "https://webcache.googleusercontent.com/search?q=cache:hkhPCopW2cEJ:https://www.cbsnews.com/news/oscars-2023-winners-list-nominees/&cd=26&hl=en&ct=clnk&gl=us"
+    },
+    {
+      "position": 8,
+      "title": "Oscar 2023 live updates: Complete list of winners",
+      "link": "https://www.cnbc.com/2023/03/12/oscars-highlights-complete-list-of-winners.html",
+      "displayed_link": "https://www.cnbc.com › 2023/03/12 › oscars-highlights-...",
+      "snippet": "“Everything Everywhere All at Once” dominated the Oscars on Sunday night, winning seven awards, including best picture, best actress, best director, best ...",
+      "snippet_highlighted_words": [
+        "“Everything Everywhere All at Once”"
+      ],
+      "about_this_result": {
+        "source": {
+          "description": "CNBC is an American basic cable business news channel and website. It provides business news programming on weekdays from 5:00 a.m. to 7:00 p.m., Eastern Time, while broadcasting talk shows, investigative reports, documentaries, infomercials, reality shows, and other programs at all other times.",
+          "source_info_link": "https://www.cnbc.com/2023/03/12/oscars-highlights-complete-list-of-winners.html",
+          "security": "secure",
+          "icon": "https://serpapi.com/searches/6435b3c8eb690f61942b976f/images/401af550b734562a90f29b798cc8f326180987ce6427b58a9add35baf81998a2bd9c05165549e1dbe66cfbf764f07763.png"
+        }
+      },
+      "about_page_link": "https://www.google.com/search?q=About+https://www.cnbc.com/2023/03/12/oscars-highlights-complete-list-of-winners.html&tbm=ilp&ilps=ADJL0ixHnjOt3qWdurjRSuPjJD-e4sWKxA",
+      "about_page_serpapi_link": "https://serpapi.com/search.json?engine=google_about_this_result&google_domain=google.com&ilps=ADJL0ixHnjOt3qWdurjRSuPjJD-e4sWKxA&q=About+https%3A%2F%2Fwww.cnbc.com%2F2023%2F03%2F12%2Foscars-highlights-complete-list-of-winners.html"
+    }
+  ],
+  "pagination": {
+    "current": 1,
+    "next": "https://www.google.com/search?q=What+movie+won+best+picture+in+2023%3F&oq=What+movie+won+best+picture+in+2023%3F&start=10&sourceid=chrome&ie=UTF-8",
+    "other_pages": {
+      "2": "https://www.google.com/search?q=What+movie+won+best+picture+in+2023%3F&oq=What+movie+won+best+picture+in+2023%3F&start=10&sourceid=chrome&ie=UTF-8",
+      "3": "https://www.google.com/search?q=What+movie+won+best+picture+in+2023%3F&oq=What+movie+won+best+picture+in+2023%3F&start=20&sourceid=chrome&ie=UTF-8",
+      "4": "https://www.google.com/search?q=What+movie+won+best+picture+in+2023%3F&oq=What+movie+won+best+picture+in+2023%3F&start=30&sourceid=chrome&ie=UTF-8",
+      "5": "https://www.google.com/search?q=What+movie+won+best+picture+in+2023%3F&oq=What+movie+won+best+picture+in+2023%3F&start=40&sourceid=chrome&ie=UTF-8"
+    }
+  },
+  "serpapi_pagination": {
+    "current": 1,
+    "next_link": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=What+movie+won+best+picture+in+2023%3F&start=10",
+    "next": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=What+movie+won+best+picture+in+2023%3F&start=10",
+    "other_pages": {
+      "2": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=What+movie+won+best+picture+in+2023%3F&start=10",
+      "3": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=What+movie+won+best+picture+in+2023%3F&start=20",
+      "4": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=What+movie+won+best+picture+in+2023%3F&start=30",
+      "5": "https://serpapi.com/search.json?device=desktop&engine=google&google_domain=google.com&q=What+movie+won+best+picture+in+2023%3F&start=40"
+    }
+  }
+}

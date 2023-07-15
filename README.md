@@ -52,3 +52,4 @@ https://github.com/slevin48/openai/assets/12418115/f8e0a3e6-50c9-4eb9-961f-17700
 
 * [Introducing ChatGPT and Whisper APIs](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)
 * [Chat completions](https://platform.openai.com/docs/guides/chat/introduction)
+* [Awesome ChatGPT API](https://awesome-chatgpt-api.top/posts/the-awesome/)
