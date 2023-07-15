@@ -41,7 +41,7 @@ def slice_string(text: str) -> list[str]:
 
     return result
 
-def summarize(context: str, model:str, convo: str) -> str:
+def summarize(context: str, model: str, convo: str) -> str:
     """Returns the summary of a text string."""
     context = context
     completion = openai.ChatCompletion.create(
@@ -53,10 +53,18 @@ def summarize(context: str, model:str, convo: str) -> str:
     )
     return completion.choices[0].message.content
 
-context = st.text_input('Context','summarize the following conversation')
-model = st.radio('Model',('gpt-3.5-turbo','gpt-4', 'gpt-3.5-turbo-16k'))
+def augment(summary: str,context: str, model: str, chunk: str) -> str:
+    """augment the summary with each new chunk of text"""
+    context = "augment the summary with the following context: " + summary
+    summary = summarize(context,model,chunk)
+    return summary
+
+# context = st.text_input('Context','summarize the following conversation')
+context = 'summarize the following conversation'
+# model = st.radio('Model',('gpt-3.5-turbo','gpt-4'))
+model = 'gpt-3.5-turbo'
 file = st.file_uploader('Upload Teams VTT transcript',type='vtt')
-maxtokens = {'gpt-3.5-turbo': 4096, 'gpt-4': 8192, 'gpt-3.5-turbo-16k':16384 }
+maxtokens = {'gpt-3.5-turbo': 4096,'gpt-4': 8192 }
 # st.write(maxtokens[model])
 
 if file is not None:
@@ -86,23 +94,18 @@ if file is not None:
     convo = st.text_area('vtt file content',convo)
     toknum = num_tokens(convo)
     st.write(toknum,'tokens')
-    if (toknum > maxtokens[model]):
-        st.write(f'Text too long please prune to fit under {maxtokens[model]} tokens')
-        bd = st.checkbox('Breakdown recording')
-        if bd:
+
+    if st.button('summarize'):
+
+        if (toknum > maxtokens[model]-1000):
+            # st.write(f'Text too long please prune to fit under {maxtokens[model]-1000} tokens')
             chunks = slice_string(convo)
-            sum = st.button('summarize')
+            summary = summarize(context,model,chunks[0])
+            for chunk in chunks[1:]:
+                summary = augment(summary,context,model,chunk)
+            st.write(summary)
         else:
-            sum = st.button('summarize',disabled=True)
-        if sum:
-            for chunk in chunks:
-                st.write(f'Summary of the meeting with {model}')
-                st.write(summarize(context,model,chunk))
-    else:
-        sum = st.button('summarize')
-    if sum & (toknum <= maxtokens[model]):
-        st.write(f'Summary of the meeting with {model}')
-        st.write(summarize(context,model,convo))
+            st.write(summarize(context,model,convo))
 
 else:
     with open('vtt/YannMike_2023-03-08.vtt') as f:

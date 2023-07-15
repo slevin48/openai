@@ -4,10 +4,16 @@ tomli
 streamlit
 # streamlit-cropper
 # pillow
-# matlabengine==9.12
-# matplotlib
+matlabengine
+matplotlib
 webvtt-py
 tiktoken
 langchain
 unstructured
+# unstructured[local-inference]
+pypdf
+chromadb
+# pinecone-client
+# llama_index==0.6.0
+boto3
 bs4
