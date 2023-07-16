@@ -4,8 +4,13 @@ import streamlit as st
 
 st.set_page_config(page_title='Chat 48',page_icon='🤖')
 
+avatar = {"assistant": "🤖", "user": "🐱"}
+
 # Set the API key for the openai package
 openai.api_key = st.secrets['OPEN_AI_KEY']
+
+# Debug
+# st.sidebar.write(st.session_state.convo)
 
 # Functions
 def new_chat():
@@ -72,12 +77,11 @@ for file in sorted(os.listdir('chat')):
 
 # Display the response in the Streamlit app
 for line in st.session_state.convo:
+    # st.chat_message(line.role,avatar=avatar[line.role]).write(line.content)
     if line['role'] == 'user':
-      with st.chat_message('user',avatar='🐱'):
-        st.write(line['content'])
+      st.chat_message('user',avatar=avatar['user']).write(line['content'])
     elif line['role'] == 'assistant':
-      with st.chat_message('assistant',avatar='🤖'):
-        st.write(line['content'])
+      st.chat_message('assistant',avatar=avatar['assistant']).write(line['content'])
 
 # Create a text input widget in the Streamlit app
 prompt = st.chat_input(f'convo{st.session_state.id}')
@@ -94,9 +98,6 @@ if prompt:
   # Add response to the conversation
   st.session_state.convo.append({'role':'assistant', 'content':result})
   save_chat(id)
-
-# # Debug
-# st.sidebar.write(st.session_state.convo)
 
 # # Write the chat log to a json file
 # if st.sidebar.button('Save chat 🐱🤖'):
