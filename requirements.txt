@@ -4,7 +4,7 @@ tomli
 streamlit
 # streamlit-cropper
 # pillow
-matlabengine
+# matlabengine
 matplotlib
 webvtt-py
 tiktoken
