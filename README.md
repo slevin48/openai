@@ -27,5 +27,7 @@ https://github.com/slevin48/openai/assets/12418115/f8e0a3e6-50c9-4eb9-961f-17700
 ## Resources:
 
 * [Introducing ChatGPT and Whisper APIs](https://openai.com/blog/introducing-chatgpt-and-whisper-apis)
-* [Chat completions](https://platform.openai.com/docs/guides/chat/introduction)
+* [Chat completions OpenAI Doc](https://platform.openai.com/docs/guides/chat/introduction)
 * [Awesome ChatGPT API](https://awesome-chatgpt-api.top/posts/the-awesome/)
+* [Build conversational apps](https://docs.streamlit.io/knowledge-base/tutorials/build-conversational-apps)
+* [LangChain 🤝 Streamlit](https://blog.streamlit.io/langchain-streamlit/)
