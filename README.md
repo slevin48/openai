@@ -6,35 +6,7 @@
 
 ## ChatGPT (New GPT 3.5 turbo API) [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chat48.streamlit.app/)
 
-https://github.com/slevin48/openai/assets/12418115/c6d2455d-bfa2-4c5d-849b-2ad31a755540
-
-```python
-import openai
-import streamlit as st
-
-# Set the API key for the openai package
-openai.api_key = st.secrets['OPEN_AI_KEY']
-
-st.title("🤖 ChatGPT-like bot 🐱 ")
-
-# Create a text input widget in the Streamlit app
-prompt = st.chat_input("Say something")
-if prompt:
-    with st.chat_message("🐱"):
-        st.write(prompt)
-
-    # Generate a response from the ChatGPT model
-    completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
-        messages=[
-            {"role": "user", "content": prompt }
-                ]
-    )
-
-    # Display the response in the Streamlit app
-    with st.chat_message("🤖"):
-        st.write(completion.choices[0].message.content)
-```
+https://github.com/slevin48/openai/assets/12418115/91b2c4c6-7338-4f51-9440-16e59626378d
 
 ## Summary [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://teams-summarizer.streamlit.app/)
 

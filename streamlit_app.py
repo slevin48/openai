@@ -2,7 +2,7 @@ import openai
 import json, os
 import streamlit as st
 
-st.set_page_config(page_title="Chat 48",page_icon="🤖")
+st.set_page_config(page_title='Chat 48',page_icon='🤖')
 
 # Set the API key for the openai package
 openai.api_key = st.secrets['OPEN_AI_KEY']
@@ -28,13 +28,14 @@ def dumb_chat():
     dummy = json.load(f)
   return dummy[1]['content']
 
-def chat(text):
+def chat_stream(messages):
   # Generate a response from the ChatGPT model
   completion = openai.ChatCompletion.create(
-      model='gpt-3.5-turbo',
-        messages= text
+        model='gpt-3.5-turbo',
+        messages= messages,
+        stream = True
   )
-  return completion.choices[0].message.content
+  return completion
 
 
 # Initialization
@@ -57,31 +58,39 @@ for file in sorted(os.listdir('chat')):
   if st.sidebar.button(f'💬 {filename}'):
      select_chat(file)
 
+# Display the response in the Streamlit app
+for line in st.session_state.convo:
+    if line['role'] == 'user':
+      with st.chat_message('user',avatar='🐱'):
+        st.write(line['content'])
+    elif line['role'] == 'assistant':
+      with st.chat_message('assistant',avatar='🤖'):
+        st.write(line['content'])
 
 # Create a text input widget in the Streamlit app
 prompt = st.chat_input(f'convo{st.session_state.id}')
 
 if prompt:
   # Append the text input to the conversation
+  with st.chat_message('user',avatar='🐱'):
+    st.write(prompt)
   st.session_state.convo.append({'role': 'user', 'content': prompt })
-
   # Query the chatbot with the complete conversation
-  # response = dumb_chat()
-  response = chat(st.session_state.convo)
-
+  report = []
+  with st.chat_message('assistant',avatar='🤖'):
+      res_box = st.empty()
+      # Looping over the response
+      for resp in chat_stream(st.session_state.convo):
+          if resp.choices[0].finish_reason is None:
+              # join method to concatenate the elements of the list 
+              # into a single string, then strip out any empty strings
+              report.append(resp.choices[0].delta.content)
+              result = ''.join(report).strip()
+              result = result.replace('\n', '')        
+              res_box.write(result) 
   # Add response to the conversation
-  st.session_state.convo.append({'role': 'assistant', 'content': response })
-
+  st.session_state.convo.append({'role':'assistant', 'content':result})
   save_chat(id)
-
-# Display the response in the Streamlit app
-for line in st.session_state.convo:
-    if line['role'] == 'user':
-      with st.chat_message('🐱'):
-        st.write(line['content'])
-    else:
-      with st.chat_message('🤖'):
-        st.write(line['content'])
 
 # # Debug
 # st.write(st.session_state.convo)
