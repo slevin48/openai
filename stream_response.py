@@ -7,9 +7,8 @@ st.set_page_config(page_title="Stream",page_icon="🤖")
 # Set the API key for the openai package
 openai.api_key = st.secrets["OPEN_AI_KEY"]
 
-def chat_stream(text):
+def chat_stream(messages):
   # Generate a response from the ChatGPT model
-  messages = [{"role": "user", "content": text}]
   completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages= messages,
@@ -40,7 +39,7 @@ if prompt:
     with st.chat_message("assistant",avatar="🤖"):
         res_box = st.empty()
         # Looping over the response
-        for resp in chat_stream(prompt):
+        for resp in chat_stream(st.session_state["messages"]):
                 if resp.choices[0].finish_reason is None:
                     # join method to concatenate the elements of the list 
                     # into a single string, then strip out any empty strings
