@@ -6,7 +6,7 @@
 
 ## ChatGPT (New GPT 3.5 turbo API) [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chat48.streamlit.app/)
 
-https://user-images.githubusercontent.com/12418115/222990188-9cb2ee4a-29c6-4822-995e-f89b1f3225c1.webm
+https://github.com/slevin48/openai/assets/12418115/c6d2455d-bfa2-4c5d-849b-2ad31a755540
 
 ```python
 import openai
