@@ -48,7 +48,7 @@ if 'id' not in st.session_state:
 id = st.session_state.id
 
 
-st.title('🐱 ChatGPT-like bot 🤖')
+st.sidebar.title('ChatGPT-like bot 🤖')
 
 if st.sidebar.button('New Chat 🐱'):
    new_chat()
@@ -59,7 +59,7 @@ for file in sorted(os.listdir('chat')):
 
 
 # Create a text input widget in the Streamlit app
-prompt = st.text_input(f'convo{st.session_state.id}')
+prompt = st.chat_input(f'convo{st.session_state.id}')
 
 if prompt:
   # Append the text input to the conversation
@@ -77,9 +77,11 @@ if prompt:
 # Display the response in the Streamlit app
 for line in st.session_state.convo:
     if line['role'] == 'user':
-      st.write('🐱',line['content'])
+      with st.chat_message('🐱'):
+        st.write(line['content'])
     else:
-        st.write('🤖',line['content'])
+      with st.chat_message('🤖'):
+        st.write(line['content'])
 
 # # Debug
 # st.write(st.session_state.convo)

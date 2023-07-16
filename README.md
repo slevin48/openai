@@ -18,18 +18,22 @@ openai.api_key = st.secrets['OPEN_AI_KEY']
 st.title("🤖 ChatGPT-like bot 🐱 ")
 
 # Create a text input widget in the Streamlit app
-prompt = st.text_input("Enter your message:", "Hello!" )
+prompt = st.chat_input("Say something")
+if prompt:
+    with st.chat_message("🐱"):
+        st.write(prompt)
 
-# Generate a response from the ChatGPT model
-completion = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
-      messages=[
-          {"role": "user", "content": prompt }
-            ]
-)
+    # Generate a response from the ChatGPT model
+    completion = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            {"role": "user", "content": prompt }
+                ]
+    )
 
-# Display the response in the Streamlit app
-st.write("🤖 ChatGPT:", completion.choices[0].message.content)
+    # Display the response in the Streamlit app
+    with st.chat_message("🤖"):
+        st.write(completion.choices[0].message.content)
 ```
 
 ## Summary [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://teams-summarizer.streamlit.app/)
