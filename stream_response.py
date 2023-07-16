@@ -4,6 +4,9 @@ import streamlit as st
 
 st.set_page_config(page_title="Stream",page_icon="🤖")
 
+# Set the API key for the openai package
+openai.api_key = st.secrets["OPEN_AI_KEY"]
+
 def chat_stream(text):
   # Generate a response from the ChatGPT model
   messages = [{"role": "user", "content": text}]
@@ -14,28 +17,25 @@ def chat_stream(text):
   )
   return completion 
 
-# def llm_stream(text):
-#     completion = openai.Completion.create(
-#         model="text-davinci-003",
-#         prompt=text,
-#         max_tokens=120, 
-#         # temperature = 0.5,
-#         stream = True)
-#     return completion
-
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role":"assistant", "content":"How can I help you?"}]
 
-# Set the API key for the openai package
-openai.api_key = st.secrets["OPEN_AI_KEY"]
+# Display the response in the Streamlit app
+for line in st.session_state["messages"]:
+    if line['role'] == 'user':
+      with st.chat_message('user',avatar='🐱'):
+        st.write(line['content'])
+    else:
+      with st.chat_message('assistant',avatar='🤖'):
+        st.write(line['content'])
 
-st.title("🤖 Stream Response")
-st.write("What is the meaning of life?")
+
 prompt = st.chat_input("Ask me anything ...")
 
 if prompt:
     with st.chat_message("user",avatar="🐱"):
         st.write(prompt)
+    st.session_state["messages"].append({"role":"user", "content":prompt})
     report = []
     with st.chat_message("assistant",avatar="🤖"):
         res_box = st.empty()
@@ -48,3 +48,5 @@ if prompt:
                     result = "".join(report).strip()
                     result = result.replace("\n", "")        
                     res_box.write(result) 
+        
+    st.session_state["messages"].append({"role":"assistant", "content":result})
