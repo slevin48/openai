@@ -4,7 +4,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.callbacks import StreamlitCallbackHandler
 import streamlit as st
 
-st.set_page_config(page_title="CSV Agent",page_icon="📄")
+st.set_page_config(page_title="Chat with CSV",page_icon="🤖")
 
 # Set the API key for the openai package
 openai_api_key = st.secrets["OPEN_AI_KEY"]
@@ -13,7 +13,7 @@ avatar = {"assistant": "🤖", "user": "🐱"}
 # Set the API key for the openai package
 openai_api_key = st.secrets["OPEN_AI_KEY"]
 
-st.sidebar.title("📄 CSV Agent")
+st.sidebar.title("🤖 Chat with CSV 📄")
 
 file = st.sidebar.file_uploader("Upload a CSV file", type=["csv"])
 
@@ -43,9 +43,19 @@ st.sidebar.write("how many rows are there?")
 st.sidebar.write("how many people have more than 3 siblings")
 st.sidebar.write("whats the square root of the average age?")
 
+# st.sidebar.write(st.session_state.messages)
+
+if "messages" not in st.session_state:
+    st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
+
+for msg in st.session_state.messages:
+    st.chat_message(msg["role"],avatar=avatar[msg["role"]]).write(msg["content"])
+
 if prompt := st.chat_input(placeholder=text,disabled= not file_upload):
+    st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user",avatar=avatar["user"]).write(prompt)
     with st.chat_message("assistant",avatar=avatar["assistant"]):
         st_callback = StreamlitCallbackHandler(st.container())
         response = agent.run(prompt, callbacks=[st_callback])
+        st.session_state.messages.append({"role": "assistant", "content": response})
         st.write(response)
