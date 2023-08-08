@@ -53,8 +53,9 @@ def summarize(context: str, model:str, convo: str) -> str:
     )
     return completion.choices[0].message.content
 
-context = st.text_input('Context','summarize the following conversation')
-model = st.radio('Model',('gpt-3.5-turbo','gpt-4', 'gpt-3.5-turbo-16k'))
+context = st.text_input('Context','summarize the following conversation, with detailed bullet points')
+# model = st.radio('Model',('gpt-3.5-turbo','gpt-4', 'gpt-3.5-turbo-16k'))
+model = 'gpt-3.5-turbo-16k'
 file = st.file_uploader('Upload Teams VTT transcript',type='vtt')
 maxtokens = {'gpt-3.5-turbo': 4096, 'gpt-4': 8192, 'gpt-3.5-turbo-16k':16384 }
 # st.write(maxtokens[model])
