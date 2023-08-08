@@ -10,11 +10,22 @@ openai.api_key = st.secrets["OPEN_AI_KEY"]
 def chat_stream(messages):
   # Generate a response from the ChatGPT model
   completion = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model='gpt-3.5-turbo',
         messages= messages,
         stream = True
   )
-  return completion 
+  report = []
+  res_box = st.empty()
+  # Looping over the response
+  for resp in completion:
+      if resp.choices[0].finish_reason is None:
+          # join method to concatenate the elements of the list 
+          # into a single string, then strip out any empty strings
+          report.append(resp.choices[0].delta.content)
+          result = ''.join(report).strip()
+          result = result.replace('\n', '')        
+          res_box.write(result) 
+  return result
 
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role":"assistant", "content":"How can I help you?"}]
@@ -35,17 +46,6 @@ if prompt:
     with st.chat_message("user",avatar="🐱"):
         st.write(prompt)
     st.session_state["messages"].append({"role":"user", "content":prompt})
-    report = []
     with st.chat_message("assistant",avatar="🤖"):
-        res_box = st.empty()
-        # Looping over the response
-        for resp in chat_stream(st.session_state["messages"]):
-                if resp.choices[0].finish_reason is None:
-                    # join method to concatenate the elements of the list 
-                    # into a single string, then strip out any empty strings
-                    report.append(resp.choices[0].delta.content)
-                    result = "".join(report).strip()
-                    result = result.replace("\n", "")        
-                    res_box.write(result) 
-        
+        result = chat_stream(st.session_state.messages)        
     st.session_state["messages"].append({"role":"assistant", "content":result})
