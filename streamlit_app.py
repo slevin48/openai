@@ -1,4 +1,4 @@
-import openai
+from openai import OpenAI
 import json, os
 import streamlit as st
 
@@ -7,7 +7,10 @@ st.set_page_config(page_title='Chat 48',page_icon='🤖')
 avatar = {"assistant": "🤖", "user": "🐱"}
 
 # Set the API key for the openai package
-openai.api_key = st.secrets['OPEN_AI_KEY']
+client = OpenAI(
+    # defaults to os.environ.get("OPENAI_API_KEY")
+    api_key=st.secrets['OPEN_AI_KEY'],
+)
 
 # Debug
 # st.sidebar.write(st.session_state.convo)
@@ -36,7 +39,7 @@ def dumb_chat():
 
 def chat_stream(messages):
   # Generate a response from the ChatGPT model
-  completion = openai.ChatCompletion.create(
+  completion = client.chat.completions.create(
         model='gpt-3.5-turbo',
         messages= messages,
         stream = True
