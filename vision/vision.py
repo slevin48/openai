@@ -1,5 +1,5 @@
 from openai import OpenAI
-import base64, requests
+import base64, requests, os
 import streamlit as st
 from PIL import Image
 
@@ -44,6 +44,11 @@ if 'convo' not in st.session_state:
 
 if 'advanced_mode' not in st.session_state:
   st.session_state.advanced_mode = False
+
+# create the folder vision/img if it doesn't exist
+if not os.path.exists('vision/img'):
+  os.makedirs('vision/img')
+
 
 st.sidebar.title('GPT-4 vision 🤖👀')
 
