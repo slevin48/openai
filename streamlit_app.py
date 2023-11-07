@@ -37,10 +37,17 @@ def dumb_chat():
   st.write(dummy[1]['content'])
   return dummy[1]['content']
 
-def chat_stream(messages):
+def load_model():
+  # models = list(client.models.list())
+  # models_name = [model.id for model in models]
+  with open('models.txt') as f:
+    models_name = f.read().splitlines()
+  return models_name
+
+def chat_stream(messages,model='gpt-3.5-turbo'):
   # Generate a response from the ChatGPT model
   completion = client.chat.completions.create(
-        model='gpt-3.5-turbo',
+        model=model,
         messages= messages,
         stream = True
   )
@@ -68,8 +75,26 @@ if 'id' not in st.session_state:
 
 id = st.session_state.id
 
+if 'advanced_mode' not in st.session_state:
+  st.session_state.advanced_mode = False
 
 st.sidebar.title('ChatGPT-like bot 🤖')
+
+# Add a toggle to enable advanced mode
+advanced_mode = st.sidebar.toggle('Advanced mode')
+if advanced_mode:
+  password = st.sidebar.text_input('Enter password', type='password')
+  if password == st.secrets['PASSWORD']:
+    st.session_state.advanced_mode = True
+  else:
+    st.sidebar.warning('Incorrect password')
+
+if st.session_state.advanced_mode:
+  models_name = load_model()
+  selected_model = st.sidebar.selectbox('Select OpenAI model', models_name)
+  # st.write('Selected model:', selected_model)
+else:
+  selected_model = 'gpt-3.5-turbo'
 
 if st.sidebar.button('New Chat 🐱'):
    new_chat()
@@ -96,7 +121,7 @@ if prompt:
   st.session_state.convo.append({'role': 'user', 'content': prompt })
   # Query the chatbot with the complete conversation
   with st.chat_message('assistant',avatar='🤖'):
-     result = chat_stream(st.session_state.convo)
+     result = chat_stream(st.session_state.convo,selected_model)
     #  result = dumb_chat()
   # Add response to the conversation
   st.session_state.convo.append({'role':'assistant', 'content':result})
