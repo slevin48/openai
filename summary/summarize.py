@@ -44,7 +44,7 @@ def slice_string(text: str) -> list[str]:
 def summarize(context: str, model:str, convo: str) -> str:
     """Returns the summary of a text string."""
     context = context
-    completion = openai.ChatCompletion.create(
+    completion = openai.chat.completions.create(
     model = model,
       messages=[
         {'role': 'system','content': context},
@@ -54,11 +54,11 @@ def summarize(context: str, model:str, convo: str) -> str:
     return completion.choices[0].message.content
 
 context = st.text_input('Context','summarize the following conversation, with detailed bullet points')
-# model = st.radio('Model',('gpt-3.5-turbo','gpt-4', 'gpt-3.5-turbo-16k'))
-model = 'gpt-3.5-turbo-16k'
+model = st.radio('Model',('gpt-4-1106-preview', 'gpt-3.5-turbo-1106'))
+# model = 'gpt-3.5-turbo-1106'
 file = st.file_uploader('Upload Teams VTT transcript',type='vtt')
-maxtokens = {'gpt-3.5-turbo': 4096, 'gpt-4': 8192, 'gpt-3.5-turbo-16k':16384 }
-# st.write(maxtokens[model])
+maxtokens = {'gpt-4-1106-preview': 128000, 'gpt-3.5-turbo-1106':16384 }
+st.write(model,maxtokens[model],'tokens')
 
 if file is not None:
     data = StringIO(file.getvalue().decode('utf-8'))
