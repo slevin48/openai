@@ -20,7 +20,11 @@ https://github.com/slevin48/openai/assets/12418115/b37ec63c-1a7d-4c81-a4b0-5f10f
 
 https://github.com/slevin48/openai/assets/12418115/f8e0a3e6-50c9-4eb9-961f-177000a2d7f4
 
-## Vision 👀
+## Assistant [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://assistant48.streamlit.app/)
+
+https://github.com/slevin48/openai/assets/12418115/6f31226b-50d7-436e-b0ec-7132a6ddfd7e
+
+## Vision 👀 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://chat-vision.streamlit.app/)
 
 https://github.com/slevin48/openai/assets/12418115/1a83c37c-b105-42cf-b2d7-b25656824e13
 
