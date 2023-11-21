@@ -11,6 +11,18 @@ st.title('📝 Teams meeting summarizer')
 # Set the API key for the openai package
 openai.api_key = st.secrets['OPEN_AI_KEY']
 
+if 'advanced_mode' not in st.session_state:
+  st.session_state.advanced_mode = False
+
+# Add a toggle to enable advanced mode
+advanced_mode = st.toggle('Advanced mode')
+if advanced_mode:
+  password = st.text_input('Enter password', type='password')
+  if password == st.secrets['PASSWORD']:
+    st.session_state.advanced_mode = True
+  else:
+    st.warning('Incorrect password')
+
 chunk_size = 3000
 
 def num_tokens(string: str) -> int:
@@ -54,11 +66,16 @@ def summarize(context: str, model:str, convo: str) -> str:
     return completion.choices[0].message.content
 
 context = st.text_input('Context','summarize the following conversation, with detailed bullet points')
-model = st.radio('Model',('gpt-4-1106-preview', 'gpt-3.5-turbo-1106'))
-# model = 'gpt-3.5-turbo-1106'
-file = st.file_uploader('Upload Teams VTT transcript',type='vtt')
+
+if st.session_state.advanced_mode:
+  model = st.radio('Model',('gpt-4-1106-preview', 'gpt-3.5-turbo-1106'))
+  # st.write('Selected model:', selected_model)
+else:
+  model = 'gpt-3.5-turbo-1106'
+
 maxtokens = {'gpt-4-1106-preview': 128000, 'gpt-3.5-turbo-1106':16384 }
 st.write(model,maxtokens[model],'tokens')
+file = st.file_uploader('Upload Teams VTT transcript',type='vtt')
 
 if file is not None:
     data = StringIO(file.getvalue().decode('utf-8'))
