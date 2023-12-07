@@ -14,7 +14,7 @@ unstructured
 pypdf
 chromadb
 # pinecone-client
-# llama_index==0.6.0
+llama_index
 boto3
 bs4
 duckduckgo-search
