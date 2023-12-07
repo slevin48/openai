@@ -1,25 +1,20 @@
 import streamlit as st
-from llama_index import download_loader, GPTSimpleVectorIndex, LLMPredictor, ServiceContext
+from llama_index import download_loader, VectorStoreIndex, StorageContext, ServiceContext, LLMPredictor, load_index_from_storage
 from langchain.chat_models import ChatOpenAI
 from langchain.schema import HumanMessage
 import urllib.request
 import urllib.parse
-import os, boto3, json
+import os, json
 
-s3_bucket = 'book48'
-s3_client = boto3.client('s3',aws_access_key_id = st.secrets["aws"]["aws_access_key_id"],
-                    aws_secret_access_key = st.secrets["aws"]["aws_secret_access_key"])
-
-os.environ['OPENAI_API_KEY'] = st.secrets['OPEN_AI_KEY'] 
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY'] 
 chat = ChatOpenAI(model_name="gpt-3.5-turbo")
 llm_predictor = LLMPredictor(llm=chat)
 service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor)
 
-try:
+if not os.path.exists('book'):
     os.mkdir('book')
-    os.mkdir('index')
-except:
-    pass
+# if not os.path.exists('storage'):
+#     os.mkdir('storage')
 
 url = "https://www.impromptubook.com/wp-content/uploads/2023/03/impromptu-rh.pdf"
 
@@ -45,12 +40,14 @@ def load_doc(pdf):
     PDFReader = download_loader("PDFReader")
     loader = PDFReader()
     documents = loader.load_data(pdf)
-    index = GPTSimpleVectorIndex.from_documents(documents,service_context=service_context)
+    index = VectorStoreIndex.from_documents(documents,service_context=service_context)
     return index
 
-def load_index(file):
-    # load from disk
-    index = GPTSimpleVectorIndex.load_from_disk(file,service_context=service_context)
+def load_index(folder = 'storage'):
+    # rebuild storage context
+    storage_context = StorageContext.from_defaults(persist_dir=folder)
+    # load index
+    index = load_index_from_storage(storage_context)
     return index
 
 def change_prompt(prompt):
@@ -58,45 +55,34 @@ def change_prompt(prompt):
 
 
 st.title("🤖 Question Answering on Book")
-st.header("📖 Impromptu")
+# st.header("📖 Impromptu")
+st.markdown(f"Source: 📖 [Impromptu]({url})")
 
-src = st.radio('Source',['full','chapter1'],index=1)
-if src == 'full':
-    try:
-        pdf = get_book(url)
-    except Exception as e:
-        print(f"Error downloading PDF file: {e}")
-    file = 'index/index-impromptu.json'
-elif src == 'chapter1':
-    pdf = 'impromptu-chap1.pdf'
-    file = 'index/index-impromptu-chap1.json'
-# s3_client.download_file(s3_bucket, object_name,file_name)
-s3_client.download_file(s3_bucket,file, file)
+# folder = 'chap4/storage'
+folder = 'storage'
 
-# list = os.listdir('book')
-# l = st.selectbox("Select Book",list)
-
-
-if os.path.exists(file):
-    index = load_index(file)
-    print(f'Using existing index: {file}')
-else:
-    index = load_doc(os.path.join('book',pdf))
-    # save index to file
-    index.save_to_disk(file)
-    print(f'Creating and saving index: {file}')
+try:
+    with st.spinner('Loading index...'):
+        index = load_index(folder)
+    # st.write(f'Index loaded from: {folder}')
+except:
+    pdf = get_book(url)
+    with st.spinner('Creating index...'):
+        index = load_doc(os.path.join('book',pdf))
+        index.storage_context.persist(folder)
+    # st.write(f'Creating and saving index to: {folder}')
 
 if 'prompt' not in st.session_state:
-    st.session_state.prompt = "what is the opinion of the author?"
+    st.session_state.prompt = "what is the potential of AI in education?"
 
 query = st.text_area('Query',value=st.session_state.prompt)
 if st.button('Answer'):
-    res = index.query(query)
+    query_engine = index.as_query_engine()
+    res = query_engine.query(query)
     st.write(res.response)
-    # st.write("### Sources:")
     with st.expander('Sources:'):
-        # st.write(res.get_formatted_sources().replace('>',''))
-        st.write(res.source_nodes[0].node.get_text())
+        for source in res.source_nodes:
+            st.write(source.node.get_text())
     st.write('Follow-up questions:')
     follow_up = f'''
     Provide a list of of 3 follow-up questions the initial query and the result associated. 
