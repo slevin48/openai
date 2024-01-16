@@ -21,8 +21,8 @@ if 'messages' not in st.session_state:
     )
     st.session_state.messages = messages
 messages = st.session_state.messages
-if 'run' not in st.session_state:
-    st.session_state.run = None
+# if 'run' not in st.session_state:
+#     st.session_state.run = None
     
 st.sidebar.write('## Assistants')
 list_of_assistants = client.beta.assistants.list()
@@ -55,7 +55,9 @@ st.sidebar.write(f'Created at {datetime.datetime.fromtimestamp(thread.created_at
 
 ## 2 - Add a message
 if prompt := st.chat_input():
-    with st.sidebar.status('Processing...', expanded=True) as status:
+    # with st.sidebar.status('Processing...', expanded=True) as status:
+    with st.spinner('Wait for it...'):
+        
         messages = client.beta.threads.messages.create(
             thread_id=thread.id,
             role="user",
@@ -63,7 +65,7 @@ if prompt := st.chat_input():
         )
         st.session_state.messages = messages
         # st.write(messages)
-        st.write('Adding message...')
+        st.toast('Adding message...')
 
 ## 3 - Run the thread
         run = client.beta.threads.runs.create(
@@ -71,18 +73,23 @@ if prompt := st.chat_input():
             assistant_id=assistant.id,
             # instructions="Please address the user as Jane Doe. The user has a premium account."
         )
-        st.session_state.run = run
-        st.write(run.status)
+        # st.session_state.run = run
+        st.toast(run.status)
 
-## 4 - Get run's status
-        while st.session_state.run.status != 'completed':
+## 4 - Get run's status and steps
+        while run.status != 'completed':
+            run_steps = client.beta.threads.runs.steps.list(
+                thread_id=thread.id,
+                run_id=run.id
+            )
+            st.toast(run_steps)
             time.sleep(1)
             run = client.beta.threads.runs.retrieve(
                 thread_id=thread.id,
-                run_id=st.session_state.run.id
+                run_id=run.id
             )
-            st.session_state.run = run
-            st.write(run.status)
+            # st.session_state.run = run
+            st.toast(run.status)
 
 ## 5 - Get messages
         messages = client.beta.threads.messages.list(
@@ -90,8 +97,8 @@ if prompt := st.chat_input():
         )
         st.session_state.messages = messages
         # st.write(messages.data)
-        status.update(label="Processed", state="complete", expanded=False)
-
+        # status.update(label="Processed", state="complete", expanded=False)
+    st.toast('Dairy🥛!')
 
     for line in messages.data[::-1]:
         st.chat_message(line.role,avatar=avatar[line.role]).write(line.content[0].text.value)
@@ -105,3 +112,4 @@ if prompt := st.chat_input():
 st.sidebar.write('## Prompt examples')
 st.sidebar.write("How to write text in string arrays with MATLAB?")
 st.sidebar.write("How to solve the equation `3x + 11 = 14`?")
+st.sidebar.write("What is the 42nd element of Fibonacci?")
