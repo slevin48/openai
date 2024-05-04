@@ -9,6 +9,7 @@ matplotlib
 webvtt-py
 tiktoken
 langchain
+langchain-experimental
 unstructured
 # unstructured[local-inference]
 pypdf
