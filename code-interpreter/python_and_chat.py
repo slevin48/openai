@@ -1,5 +1,7 @@
-from langchain.agents.agent_toolkits import create_python_agent
-from langchain.tools.python.tool import PythonREPLTool
+# Learn more: https://python.langchain.com/docs/integrations/toolkits/python/
+from langchain import hub
+from langchain.agents import AgentExecutor, create_openai_functions_agent
+from langchain_experimental.tools import PythonREPLTool
 from langchain.agents.agent_types import AgentType
 from langchain.chat_models import ChatOpenAI
 from langchain.callbacks import StreamlitCallbackHandler
@@ -8,23 +10,21 @@ import streamlit as st
 st.set_page_config(page_title="Python and Chat",page_icon="🐍")
 
 # Set the API key for the openai package
-openai_api_key = st.secrets["OPEN_AI_KEY"]
-
+openai_api_key = st.secrets["OPENAI_API_KEY"]
+instructions = """You are an agent designed to write and execute python code to answer questions.
+You have access to a python REPL, which you can use to execute python code.
+If you get an error, debug your code and try again.
+Only use the output of your code to answer the question. 
+You might know the answer without running any code, but you should still run the code to get the answer.
+If it does not seem like you can write code to answer the question, just return "I don't know" as the answer.
+"""
+base_prompt = hub.pull("langchain-ai/openai-functions-template")
+prompt = base_prompt.partial(instructions=instructions)
+tools = [PythonREPLTool()]
 avatar = {"assistant": "🐍", "user": "🐱"}
-# Set the API key for the openai package
-openai_api_key = st.secrets["OPEN_AI_KEY"]
-agent_executor = create_python_agent(
-    llm=ChatOpenAI(
-        temperature=0, 
-        model="gpt-3.5-turbo-0613", 
-        openai_api_key=openai_api_key,
-        streaming=True,
-        ),
-    tool=PythonREPLTool(),
-    verbose=True,
-    agent_type=AgentType.OPENAI_FUNCTIONS,
-    agent_executor_kwargs={"handle_parsing_errors": True},
-)
+llm =ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613", streaming=True)
+agent = create_openai_functions_agent(llm, tools, prompt)
+agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 
 st.sidebar.title("🐍 Python and Chat 🐱")
 st.sidebar.write("*Example:*")
@@ -46,6 +46,6 @@ if prompt := st.chat_input():
     st.chat_message("user",avatar=avatar["user"]).write(prompt)
     with st.chat_message("assistant",avatar=avatar["assistant"]):
         st_callback = StreamlitCallbackHandler(st.container(), expand_new_thoughts=True)
-        response = agent_executor.run(prompt, callbacks=[st_callback])
-        st.session_state.messages.append({"role": "assistant", "content": response})
-        st.write(response)
+        response = agent_executor.invoke({"input":prompt}, callbacks=[st_callback])
+        st.session_state.messages.append({"role": "assistant", "content": response["output"]})
+        st.write(response["output"])
