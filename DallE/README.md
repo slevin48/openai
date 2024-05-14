@@ -43,6 +43,10 @@ https://www.mathworks.com/help/images/ref/imageviewer-app.html
 
 ![](img/dechargement4.png)
 
+## Inpainting
+
+![](img/supermario.jpg)
+
 ## Resources:
 
 * [DALL·E 2](https://openai.com/dall-e-2/)
@@ -50,3 +54,4 @@ https://www.mathworks.com/help/images/ref/imageviewer-app.html
 * https://labs.openai.com/editor
 * [RealPython tuto](https://realpython.com/generate-images-with-dalle-openai-api/)
 * [Panel OpenAI](https://github.com/sophiamyang/panel_openai) + [tuto](https://towardsdatascience.com/chatgpt-and-dall-e-2-in-a-panel-app-1c921d7d9021)
+* [PaintAI](https://github.com/DaanBio/printAI)

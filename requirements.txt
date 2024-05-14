@@ -2,7 +2,8 @@ openai
 ipykernel
 tomli
 streamlit
-# streamlit-cropper
+streamlit-cropper
+streamlit-drawable-canvas
 # pillow
 # matlabengine
 matplotlib
