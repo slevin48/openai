@@ -65,7 +65,7 @@ if file is not None:
     toknum = num_tokens(convo)
     st.write(toknum,'tokens')
     if (toknum > maxtokens):
-        st.write(f'Text too long please prune to fit under {maxtokens[model]} tokens')
+        st.write(f'Text too long please prune to fit under {maxtokens} tokens')
     else:
         sum = st.button('summarize')
     if sum & (toknum <= maxtokens):
