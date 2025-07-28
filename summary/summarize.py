@@ -30,53 +30,64 @@ def summarize(context: str, model:str, convo: str) -> str:
     )
     return completion.choices[0].message.content
 
-context = st.text_input('Context','summarize the following conversation, with detailed bullet points')
-
-model = 'gpt-4o-mini'
-maxtokens = 128000
-st.write(model,maxtokens,'tokens')
-file = st.file_uploader('Upload Teams VTT transcript',type='vtt')
-
-if file is not None:
-    data = StringIO(file.getvalue().decode('utf-8'))
-    chat = webvtt.read_buffer(data)
-    # data = file.getvalue().decode('utf-8')
-    # with open('vtt/'+file.name,'w') as f:
-    #     f.write(data)
-    # caption = webvtt.read('vtt/'+file.name)
-    part = st.checkbox('include participants')
-    time = st.checkbox('include time')
-    str = []
-    for caption in chat:
-        if part & time:
-            str.append(f'{caption.start} --> {caption.end}')
-            str.append(caption.raw_text)
-        elif time:
-            str.append(f'{caption.start} --> {caption.end}')
-            str.append(caption.text)
-        elif part:
-            str.append(caption.raw_text)
-        else:
-            str.append(caption.text)
-    sep = '\n'
-    convo = sep.join(str)
-        
-    convo = st.text_area('vtt file content',convo)
-    toknum = num_tokens(convo)
-    st.write(toknum,'tokens')
-    if (toknum > maxtokens):
-        st.write(f'Text too long please prune to fit under {maxtokens} tokens')
-    else:
-        sum = st.button('summarize')
-    if sum & (toknum <= maxtokens):
-        st.write(f'Summary of the meeting with {model}')
-        st.write(summarize(context,model,convo))
-
+# Gate with Login
+st.write("Please login to use the summarizer (No user data is stored).")
+if not st.user.is_logged_in:
+    st.button("Login with Google", on_click=st.login,type="primary")
 else:
-    with open('vtt/YannMike_2023-03-08.vtt') as f:
-        st.download_button(
-            label="Sample VTT file",
-            data=f,
-            file_name="sample.vtt",
-            mime="text/vtt"
-          )
+    # User is logged in
+    with st.sidebar:
+        st.write(f"Welcome, {st.user.name}! 👋")
+        st.image(st.user.picture, width=50)
+        st.button("Logout", on_click=st.logout)
+        
+    context = st.text_input('Context','summarize the following conversation, with detailed bullet points')
+
+    model = 'gpt-4o-mini'
+    maxtokens = 128000
+    st.write(model,maxtokens,'tokens')
+    file = st.file_uploader('Upload Teams VTT transcript',type='vtt')
+
+    if file is not None:
+        data = StringIO(file.getvalue().decode('utf-8'))
+        chat = webvtt.read_buffer(data)
+        # data = file.getvalue().decode('utf-8')
+        # with open('vtt/'+file.name,'w') as f:
+        #     f.write(data)
+        # caption = webvtt.read('vtt/'+file.name)
+        part = st.checkbox('include participants')
+        time = st.checkbox('include time')
+        str = []
+        for caption in chat:
+            if part & time:
+                str.append(f'{caption.start} --> {caption.end}')
+                str.append(caption.raw_text)
+            elif time:
+                str.append(f'{caption.start} --> {caption.end}')
+                str.append(caption.text)
+            elif part:
+                str.append(caption.raw_text)
+            else:
+                str.append(caption.text)
+        sep = '\n'
+        convo = sep.join(str)
+            
+        convo = st.text_area('vtt file content',convo)
+        toknum = num_tokens(convo)
+        st.write(toknum,'tokens')
+        if (toknum > maxtokens):
+            st.write(f'Text too long please prune to fit under {maxtokens} tokens')
+        else:
+            sum = st.button('summarize')
+        if sum & (toknum <= maxtokens):
+            st.write(f'Summary of the meeting with {model}')
+            st.write(summarize(context,model,convo))
+
+    else:
+        with open('vtt/YannMike_2023-03-08.vtt') as f:
+            st.download_button(
+                label="Sample VTT file",
+                data=f,
+                file_name="sample.vtt",
+                mime="text/vtt"
+            )

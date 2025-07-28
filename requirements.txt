@@ -21,3 +21,4 @@ boto3
 bs4
 duckduckgo-search
 python-dotenv
+Authlib>=1.3.2
