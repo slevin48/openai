@@ -1,5 +1,6 @@
 from openai import OpenAI
 import streamlit as st
+import json, datetime, io, zipfile
 
 st.set_page_config(page_title='Chat 48',page_icon='🤖')
 
@@ -12,7 +13,7 @@ client = OpenAI(
 # Functions
 def new_chat():
    st.session_state.convo = []
-
+  
 def load_model():
   with open('models.txt') as f:
     models_name = f.read().splitlines()
@@ -34,6 +35,16 @@ def chat_stream(messages,model='gpt-4o-mini'):
           res_box.write(result) 
   return result
 
+def export_chat_zip():
+    # Create an in-memory ZIP with the conversation JSON
+    mem_zip = io.BytesIO()
+    with zipfile.ZipFile(mem_zip, mode='w', compression=zipfile.ZIP_DEFLATED) as zf:
+         timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
+         file_name = f'chat_{timestamp}.json'
+         chat_json = json.dumps(st.session_state.convo, indent=4)
+         zf.writestr(file_name, chat_json)
+    mem_zip.seek(0)
+    return mem_zip.getvalue()
 
 # Initialization: use session_state for conversation only
 if 'convo' not in st.session_state:
@@ -96,3 +107,7 @@ else:
           
     # Debug
     # st.sidebar.write(st.session_state.convo)
+
+    # Add a button to save the chat as a ZIP file
+    with st.sidebar:
+        st.download_button('Save Chat 📦', data=export_chat_zip(), file_name='chat.zip', mime='application/zip')
