@@ -19,7 +19,7 @@ def load_model():
     models_name = f.read().splitlines()
   return models_name
 
-def chat_stream(messages,model='gpt-4o-mini'):
+def chat_stream(messages,model='gpt-5-mini'):
   completion = client.chat.completions.create(
         model=model,
         messages= messages,
@@ -77,7 +77,7 @@ else:
           models_name = load_model()
           selected_model = st.selectbox('Select OpenAI model', models_name)
         else:
-          selected_model = 'gpt-4o-mini'
+          selected_model = 'gpt-5-mini'
 
         if st.button('New Chat 🐱'):
           new_chat()
