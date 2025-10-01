@@ -43,8 +43,8 @@ else:
         
     context = st.text_input('Context','summarize the following conversation, with detailed bullet points')
 
-    model = 'gpt-4o-mini'
-    maxtokens = 128000
+    model = 'gpt-5-mini'
+    maxtokens = 400000
     st.write(model,maxtokens,'tokens')
     file = st.file_uploader('Upload Teams VTT transcript',type='vtt')
 
